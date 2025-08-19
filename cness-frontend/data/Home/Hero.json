@@ -1,0 +1,78 @@
+{
+    "data": {
+      "attributes": {
+        "title": "Investing For Tomorrow, Together",
+        "highlight": "Together",
+        "buttons": [
+          {
+            "text": "Let's Get Started",
+            "url": "#",
+            "isPrimary": true
+          },
+          {
+            "text": "Let's Get Started",
+            "url": "#",
+            "isPrimary": false
+          }
+        ],
+        "backgroundImage": {
+          "data": {
+            "attributes": {
+              "url": "/assets/Background.svg",
+              "width": 500,
+              "height": 500,
+              "alt": "Hero Background"
+            }
+          }
+        },
+        "cards": [
+          {
+            "title": "Assets",
+            "linkText": "Learn more",
+            "linkUrl": "#",
+            "icon": "/assets/stacks.svg",
+            "iconWidth": 30,
+            "iconHeight": 30,
+            "iconAlt": "Stacks Icon",
+            "statText": "Assets under management",
+            "statValue": "$28.90M",
+            "image": "/assets/card1.jpg",
+            "imageWidth": 200,
+            "imageHeight": 140,
+            "imageAlt": "Card 1 Illustration"
+          },
+          {
+            "title": "",
+            "linkText": "",
+            "linkUrl": "",
+            "icon": "/assets/stacks.svg",
+            "iconWidth": 30,
+            "iconHeight": 30,
+            "iconAlt": "Stacks Icon",
+            "statText": "Professionals",
+            "statValue": "120+",
+            "image": "/assets/card2.svg",
+            "imageWidth": 100,
+            "imageHeight": 100,
+            "imageAlt": "Card 2 Illustration"
+          },
+          {
+            "title": "",
+            "linkText": "",
+            "linkUrl": "",
+            "icon": "/assets/bar.svg",
+            "iconWidth": 30,
+            "iconHeight": 30,
+            "iconAlt": "Bar Icon",
+            "statText": "Earning Client trust since",
+            "statValue": "2016",
+            "image": "/assets/card3.svg",
+            "imageWidth": 200,
+            "imageHeight": 240,
+            "imageAlt": "Card 3 Background",
+            "isBackgroundImage": true
+          }
+        ]
+      }
+    }
+  }

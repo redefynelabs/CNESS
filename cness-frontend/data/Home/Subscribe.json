@@ -1,0 +1,17 @@
+{
+    "data": {
+        "attributes": {
+            "title": "Latest News &<br />Resources",
+            "inputPlaceholder": "name@company.com",
+            "buttonText": "Subscribe",
+            "icon": {
+                "url": "/assets/staricon.svg",
+                "alt": "Star Icon"
+            },
+            "backgroundImage": {
+                "url": "/assets/subs-bg.svg",
+                "alt": "Background"
+            }
+        }
+    }
+}

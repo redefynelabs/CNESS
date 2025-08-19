@@ -1,0 +1,12 @@
+{
+    "data": {
+        "attributes": {
+            "title": "SEC Registered Investment Advisor",
+            "description": "We help you achieve your vision and cultivate confidence and peace of mind across your financial journey.",
+            "badgeText": "Investor",
+            "buttonText": "Schedule a Call",
+            "buttonUrl": "/",
+            "backgroundImage": "/assets/investor-bg.svg"
+        }
+    }
+}
