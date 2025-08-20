@@ -8,6 +8,7 @@ export interface HomeCards extends Struct.ComponentSchema {
   attributes: {
     icon: Schema.Attribute.Media<'images' | 'files'>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    isBackgroundImage: Schema.Attribute.Boolean;
     linkText: Schema.Attribute.String;
     linkUrl: Schema.Attribute.String;
     statText: Schema.Attribute.String;
@@ -25,7 +26,7 @@ export interface HomeHeroSection extends Struct.ComponentSchema {
     backgroundImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    Button: Schema.Attribute.Component<'reusable.button', false>;
+    Button: Schema.Attribute.Component<'reusable.button', true>;
     cards: Schema.Attribute.Component<'home.cards', true>;
     highlight: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -136,6 +137,7 @@ export interface ReusableHead extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     descriptionPosition: Schema.Attribute.Enumeration<['left', 'right']>;
     highlight: Schema.Attribute.String;
+    highlightTexts: Schema.Attribute.JSON;
     imageUrl: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };

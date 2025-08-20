@@ -14,7 +14,7 @@
     "Button": {
       "type": "component",
       "component": "reusable.button",
-      "repeatable": false
+      "repeatable": true
     },
     "backgroundImage": {
       "type": "media",
