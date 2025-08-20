@@ -1,4 +1,5 @@
 'use client'
+
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
@@ -13,23 +14,13 @@ interface CardData {
 
 interface WhyUsData {
     title: string
-    highlightTexts: string[]
+    highlight: string
     description?: string
     badgeText: string
     buttonText?: string
     buttonUrl?: string
-    backgroundImage: string
+    imageUrl: any
     cards?: CardData[]
-}
-
-export const whyUsData: WhyUsData = {
-    title: "You’ll Know What {highlight}",
-    highlightTexts: ["Steps to Take Next", "Builds Wealth"],
-    description: "We are Transparent Like that. No Gimmicks.",
-    badgeText: "Why Us?",
-    buttonText: "Schedule a Call",
-    buttonUrl: "/",
-    backgroundImage: "/assets/whyus-bg.svg",
 }
 
 interface WhyUsProps {
@@ -39,18 +30,22 @@ interface WhyUsProps {
 const WhyUs = ({ data }: WhyUsProps) => {
     const {
         title,
-        highlightTexts,
+        highlight = '',
         description = '',
         badgeText,
         buttonText = '',
         buttonUrl = '#',
-        backgroundImage,
+        imageUrl,
     } = data
+
+    // Split highlight by commas and trim spaces
+    const highlightTexts = highlight.split(',').map((h) => h.trim()).filter(Boolean)
 
     // State for typing animation
     const [currentHighlightIndex, setCurrentHighlightIndex] = useState(0)
 
     useEffect(() => {
+        if (highlightTexts.length === 0) return
         const interval = setInterval(() => {
             setCurrentHighlightIndex((prev) => (prev + 1) % highlightTexts.length)
         }, 3000) // Change text every 3 seconds
@@ -58,83 +53,13 @@ const WhyUs = ({ data }: WhyUsProps) => {
     }, [highlightTexts.length])
 
     // Animation variants
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                duration: 0.6,
-            },
-        },
-    }
+    const containerVariants: Variants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, duration: 0.6 } } }
+    const itemVariants: Variants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
+    const buttonVariants: Variants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }, hover: { scale: 1.05, transition: { duration: 0.2 } } }
+    const highlightVariants: Variants = { hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, exit: { opacity: 0, y: -10, transition: { duration: 0.3 } } }
 
-    const itemVariants: Variants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                ease: [0.25, 0.25, 0, 1],
-            },
-        },
-    }
-
-    const buttonVariants: Variants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.5,
-                delay: 0.3,
-                ease: 'easeOut',
-            },
-        },
-        hover: {
-            scale: 1.05,
-            transition: {
-                duration: 0.2,
-            },
-        },
-    }
-
-    const highlightVariants: Variants = {
-        hidden: { opacity: 0, y: 10 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.5,
-                ease: 'easeInOut',
-            },
-        },
-        exit: {
-            opacity: 0,
-            y: -10,
-            transition: {
-                duration: 0.3,
-                ease: 'easeInOut',
-            },
-        },
-    }
-
-    const cardVariants: Variants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                delay: 0.4,
-                ease: [0.25, 0.25, 0, 1],
-            },
-        },
-    }
-
-    // Calculate the max width of highlight texts to prevent layout shift
-    const maxHighlightWidth = Math.max(...highlightTexts.map(text => text.length)) * 10;
+    // Calculate max width of highlights to prevent layout shift
+    const maxHighlightWidth = Math.max(...highlightTexts.map(text => text.length)) * 10
 
     return (
         <div className="py-12 md:py-20 lg:py-32 text-foreground bg-gradient-to-b from-white to-active">
@@ -146,7 +71,7 @@ const WhyUs = ({ data }: WhyUsProps) => {
                 variants={containerVariants}
             >
                 <Image
-                    src={backgroundImage}
+                    src={imageUrl.url}
                     alt="Why Us Background"
                     width={1920}
                     height={1080}
@@ -154,7 +79,7 @@ const WhyUs = ({ data }: WhyUsProps) => {
                 />
 
                 <motion.div
-                    className=" md:absolute bottom-4 left-4 sm:bottom-8 sm:left-8 md:bottom-12 md:left-12 lg:bottom-20 lg:left-20 p-4 sm:p-6 bg-white/80 backdrop-blur-lg rounded-2xl min-w-[300px] max-w-4xl space-y-6 md:space-y-10 py-10"
+                    className="md:absolute bottom-4 left-4 sm:bottom-8 sm:left-8 md:bottom-12 md:left-12 lg:bottom-20 lg:left-20 p-4 sm:p-6 bg-white/80 backdrop-blur-lg rounded-2xl min-w-[300px] max-w-4xl space-y-6 md:space-y-10 py-10"
                     variants={itemVariants}
                 >
                     <div className="flex w-full justify-between items-center">
@@ -171,38 +96,39 @@ const WhyUs = ({ data }: WhyUsProps) => {
                             <Image src="/assets/staricon.svg" alt="Star Icon" width={24} height={24} className="w-6 h-6 sm:w-8 sm:h-8" />
                         </motion.div>
                     </div>
+
                     <div className="space-y-4 sm:space-y-6">
                         <motion.h1
                             className="font-semibold text-xl sm:text-3xl md:text-4xl inline-flex md:flex-col items-start"
                             variants={itemVariants}
                         >
                             {title.split('{highlight}')[0]}
-                            <div className=" mx-1 md:my-1" style={{ minWidth: `${maxHighlightWidth}px` }}>
+                            <div className="mx-1 md:my-1" style={{ minWidth: `${maxHighlightWidth}px` }}>
                                 <AnimatePresence mode="wait">
-                                    <motion.span
-                                        key={currentHighlightIndex}
-                                        className="bg-tertiary rounded-xl px-2 py-1 inline-block"
-                                        variants={highlightVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                    >
-                                        {highlightTexts[currentHighlightIndex]}
-                                    </motion.span>
+                                    {highlightTexts.length > 0 && (
+                                        <motion.span
+                                            key={currentHighlightIndex}
+                                            className="bg-tertiary rounded-xl px-2 py-1 inline-block"
+                                            variants={highlightVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                        >
+                                            {highlightTexts[currentHighlightIndex]}
+                                        </motion.span>
+                                    )}
                                 </AnimatePresence>
                             </div>
                             {title.split('{highlight}')[1] || ''}
                         </motion.h1>
-                        <div className=' flex flex-col md:flex-row justify-between md:items-center space-y-2 space-x-6'>
 
+                        <div className='flex flex-col md:flex-row justify-between md:items-center space-y-2 space-x-6'>
                             {description && (
-                                <motion.p
-                                    className="text-sm sm:text-base md:text-lg"
-                                    variants={itemVariants}
-                                >
+                                <motion.p className="text-sm sm:text-base md:text-lg" variants={itemVariants}>
                                     {description}
                                 </motion.p>
                             )}
+
                             {buttonText && (
                                 <motion.div variants={itemVariants}>
                                     <Link

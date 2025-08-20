@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import { addSubscriber } from '@/app/actions/subscribe';
+import toast, { Toaster } from 'react-hot-toast';
 
 // Animation variants
 const containerVariants: Variants = {
@@ -15,24 +17,16 @@ const buttonVariants: Variants = {
 };
 
 interface SubscribeProps {
-    data: {
-        data: {
-            attributes: {
-                icon: { url: string; alt: string };
-                title: string;
-                inputPlaceholder: string;
-                buttonText: string;
-                backgroundImage: { url: string; alt: string };
-            };
-        };
-    };
+    data: any
 }
 
 const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
-    const { attributes } = data.data;
 
     return (
-        <div className="flex flex-col lg:flex-row w-full justify-between bg-primary">
+        <div className="flex flex-col lg:flex-row w-full justify-between bg-primary relative">
+            {/* Toast container */}
+            <Toaster position="top-right" reverseOrder={false} />
+
             <motion.div
                 className="flex items-start flex-col w-full h-full justify-between lg:w-1/2  py-8 px-4 sm:px-6 md:px-10  space-y-14 md:space-y-32"
                 variants={containerVariants}
@@ -41,8 +35,8 @@ const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
             >
                 <div className="bg-active rounded-full p-3">
                     <Image
-                        src={attributes.icon.url}
-                        alt={attributes.icon.alt}
+                        src={'/assets/staricon.svg'}
+                        alt={'Star Icon'}
                         width={20}
                         height={20}
                         className="w-5 h-5 sm:w-6 sm:h-6"
@@ -52,16 +46,32 @@ const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
                 <div className="space-y-6 w-full max-w-lg">
                     <h1
                         className="text-light font-semibold text-3xl md:text-5xl"
-                        dangerouslySetInnerHTML={{ __html: attributes.title }}
+                        dangerouslySetInnerHTML={{ __html: data.title }}
                     />
-                    <form className="flex flex-col items-start sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full">
+                    <form
+                        action={async (formData: FormData) => {
+                            const email = formData.get('email');
+                            if (typeof email === 'string') {
+                                try {
+                                    await addSubscriber(email);
+                                    toast.success('Subscribed successfully! 🎉'); // success toast
+                                } catch (error) {
+                                    console.error(error);
+                                    toast.error('Failed to subscribe. Try again. ❌'); // error toast
+                                }
+                            }
+                        }}
+                        className="flex flex-col items-start sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full"
+                    >
                         <input
+                            name="email"
                             type="email"
-                            placeholder={attributes.inputPlaceholder}
+                            placeholder={'dev@cness.com'}
                             className="bg-active px-4 py-2 border border-light rounded-full text-foreground focus:ring-none w-[70%] text-sm sm:text-base"
                         />
                         <motion.button
-                            className="relative bg-secondary group text-primary px-4 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer overflow-hidden  "
+                            type="submit"
+                            className="relative bg-secondary group text-primary px-4 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer overflow-hidden"
                             variants={buttonVariants}
                             initial="initial"
                             whileHover="hover"
@@ -69,7 +79,7 @@ const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
                         >
                             <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                             <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
-                                {attributes.buttonText}
+                                {data.buttonText}
                             </span>
                         </motion.button>
                     </form>
@@ -77,8 +87,8 @@ const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
             </motion.div>
             <div className="w-full lg:w-1/2">
                 <Image
-                    src={attributes.backgroundImage.url}
-                    alt={attributes.backgroundImage.alt}
+                    src={data.backgroundImage.url}
+                    alt={data.backgroundImage.name}
                     width={500}
                     height={500}
                     className="w-full h-auto"
@@ -87,6 +97,5 @@ const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
         </div>
     );
 };
-
 
 export default Subscribe;

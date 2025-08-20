@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
         }
     }
 
-    const { title, highlight, buttons, backgroundImage, cards } = heroData.data.attributes
+    const { title, highlight, Button, backgroundImage, cards } = heroData[0]
 
     return (
         <motion.div
@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                     className='flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto'
                     variants={itemVariants}
                 >
-                    {buttons.map((button: { url: string; text: string; isPrimary?: boolean }, index: number) => (
+                    {Button.map((button: { url: string; text: string; isPrimary?: boolean }, index: number) => (
                         <Link
                             key={index}
                             href={button.url}
@@ -110,10 +110,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                     className="overflow-hidden"
                 >
                     <Image
-                        src={backgroundImage.data.attributes.url}
-                        alt={backgroundImage.data.attributes.alt}
-                        width={backgroundImage.data.attributes.width}
-                        height={backgroundImage.data.attributes.height}
+                        src={backgroundImage[0].url}
+                        alt={'Background Image'}
+                        width={500}
+                        height={500}
                         className='w-full min-h-[30dvh] h-auto object-cover'
                     />
                 </motion.div>
@@ -136,17 +136,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                     scale: 1.02,
                                     transition: { duration: 0.2 }
                                 }} style={{
-                                    backgroundImage: `url(${card.image})`,
+                                    backgroundImage: `url(${card.image.url})`,
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
                                     height: '90%'
                                 }} >
                                     <div className="bg-white/70 backdrop-blur-md rounded-2xl p-3 flex flex-col justify-between space-y-10 shadow-sm">
                                         <Image
-                                            src={card.icon}
-                                            alt={card.iconAlt}
-                                            width={card.iconWidth}
-                                            height={card.iconHeight}
+                                            src={card.icon.url}
+                                            alt={'Icon'}
+                                            width={40}
+                                            height={40}
                                         />
                                         <div className='space-y-2'>
                                             <p className="text-base font-semibold">{card.statText}</p>
@@ -188,10 +188,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                 <div className='bg-white rounded-2xl px-6 py-4 flex justify-between w-full space-x-4 items-end'>
                                     <div className=' flex flex-col justify-between space-y-10'>
                                         <Image
-                                            src={card.icon}
-                                            alt={card.iconAlt}
-                                            width={card.iconWidth}
-                                            height={card.iconHeight}
+                                            src={card.icon.url}
+                                            alt={'Icon'}
+                                            width={40}
+                                            height={40}
                                         />
                                         <div className='space-y-2'>
                                             <p className='text-base font-semibold'>{card.statText}</p>
@@ -206,10 +206,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                     {card.image && (
                                         <div>
                                             <Image
-                                                src={card.image}
-                                                alt={card.imageAlt}
-                                                width={card.imageWidth}
-                                                height={card.imageHeight}
+                                                src={card.image.url}
+                                                alt={'Image'}
+                                                width={100}
+                                                height={100}
                                                 className=' rounded-2xl'
                                             />
                                         </div>

@@ -1,4 +1,5 @@
 'use client'
+
 import { ArrowUpRight } from 'lucide-react'
 import React from 'react'
 import { motion, Variants } from 'framer-motion'
@@ -6,12 +7,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 interface CardData {
-  imageUrl: string
-  buttonText: string
-  buttonUrl: string
+  image: any
+  linkText: string
+  linkUrl: string
 }
 
-interface SolutionsData {
+interface SolutionHeadData {
   title: string
   highlight: string
   description?: string
@@ -20,117 +21,43 @@ interface SolutionsData {
   buttonUrl?: string
   descriptionPosition?: 'left' | 'right'
   buttonPosition?: 'left' | 'right'
-  cards?: CardData[] // Array of cards, each with image, button text, and URL
 }
 
-export const solutionsData: SolutionsData = {
-    title: "Covering the Full Spectrum of Global Financial Services",
-    highlight: "Global Financial Services",
-    description: "Explore our cutting-edge solutions to drive your business forward.",
-    badgeText: "Solution",
-    buttonText: "Learn More",
-    buttonUrl: "/solutions",
-    descriptionPosition: "right",
-    buttonPosition: "left",
-    cards: [
-      {
-        imageUrl: "/assets/sol1.png",
-        buttonText: "Financial Planning",
-        buttonUrl: "/solution1",
-      },
-      {
-        imageUrl: "/assets/sol2.png",
-        buttonText: "Investment Management",
-        buttonUrl: "/solution2",
-      },
-      {
-        imageUrl: "/assets/sol3.png",
-        buttonText: "Insurance & Risk Management",
-        buttonUrl: "/solution3",
-      },
-      {
-        imageUrl: "/assets/sol4.png",
-        buttonText: "Alternative Investments",
-        buttonUrl: "/solution4",
-      },
-    ],
-  }
-
+interface SolutionsData {
+  solutionHead: SolutionHeadData
+  cards?: CardData[]
+}
 
 interface SolutionsProps {
   data: SolutionsData
 }
 
 const Solutions = ({ data }: SolutionsProps) => {
+  // Normalize data
+  const solutionHead = data.solutionHead || {}
+  const cards = data.cards || []
+
   const {
-    title,
-    highlight,
+    title = '',
+    highlight = '',
     description = '',
-    badgeText,
+    badgeText = '',
     buttonText = '',
     buttonUrl = '#',
     descriptionPosition = 'right',
     buttonPosition = 'left',
-    cards = [],
-  } = data
+  } = solutionHead
 
   // Animation variants
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        duration: 0.6,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2, duration: 0.6 } },
   }
 
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.25, 0, 1],
-      },
-    },
-  }
+  const itemVariants: Variants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
+  const buttonVariants: Variants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }, hover: { scale: 1.05, transition: { duration: 0.2 } } }
+  const cardVariants: Variants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
 
-  const buttonVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        delay: 0.3,
-        ease: 'easeOut',
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  }
-
-  const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        delay: 0.4,
-        ease: [0.25, 0.25, 0, 1],
-      },
-    },
-  }
-
-  // Determine layout
   const isDescriptionLeft = description && descriptionPosition === 'left'
   const isButtonLeft = buttonText && buttonPosition === 'left'
 
@@ -227,7 +154,7 @@ const Solutions = ({ data }: SolutionsProps) => {
                 variants={cardVariants}
               >
                 <Image
-                  src={card.imageUrl}
+                  src={card.image.url}
                   alt={`Card ${index + 1}`}
                   width={200}
                   height={200}
@@ -235,13 +162,13 @@ const Solutions = ({ data }: SolutionsProps) => {
                 />
                 <div className=" py-5 px-4 w-full flex items-end justify-end group">
                   <motion.a
-                    href={card.buttonUrl}
+                    href={card.linkUrl}
                     className="relative flex w-full justify-between items-center text-2xl"
                     variants={buttonVariants}
                     whileHover="hover"
                   >
                     
-                      {card.buttonText}
+                      {card.linkText}
                     <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">
                       <ArrowUpRight size={20} />
                     </div>

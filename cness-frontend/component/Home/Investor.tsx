@@ -10,7 +10,7 @@ interface InvestorData {
   badgeText: string
   buttonText: string
   buttonUrl: string
-  backgroundImage: string
+  imageUrl: any
 }
 
 interface InvestorProps {
@@ -24,14 +24,14 @@ const Investor = ({ data }: InvestorProps) => {
     badgeText,
     buttonText,
     buttonUrl,
-    backgroundImage
+    imageUrl
   } = data
 
   return (
     <div className='w-full  px-4 md:px-6 lg:px-10 text-foreground flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pb-20 bg-gradient-to-b from-active to-white'>
       <div className='w-full'>
         <Image
-          src={backgroundImage}
+          src={imageUrl.url}
           alt='Investor Background'
           width={500}
           height={500}

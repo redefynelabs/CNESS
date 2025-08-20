@@ -5,54 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 
-// Strapi-like JSON data
-const insightsData = {
-  data: {
-    attributes: {
-      title: "Hear Directly From CNESS Experts",
-      highlightedText: "CNESS Experts",
-      badgeText: "Insights",
-      buttonText: "Learn More",
-      buttonUrl: "/learn-more",
-      cards: [
-        {
-          id: 1,
-          category: "Financing",
-          title: "Use Physician Lifecycle Planning to Maximize Your Financial Potential",
-          image: {
-            url: "/assets/ins-card1.svg",
-            alt: "Financing Background",
-          },
-          buttonUrl: "/financing",
-        },
-        {
-          id: 2,
-          category: "Diversity, Equity, and Inclusion",
-          title: "",
-          image: {
-            url: "/assets/ins-card3.svg",
-            alt: "DEI Background",
-          },
-          overlayImage: {
-            url: "/assets/cardstar.svg",
-            alt: "Overlay Star",
-          },
-          buttonUrl: "/dei",
-        },
-        {
-          id: 3,
-          category: "Advise",
-          title: "How to Overcome the Impact of Inflation",
-          image: {
-            url: "/assets/ins-card2.svg",
-            alt: "Advise Background",
-          },
-          buttonUrl: "/advise",
-        },
-      ],
-    },
-  },
-};
+
 
 // Animation variants
 const cardVariants: Variants = {
@@ -65,8 +18,25 @@ const buttonVariants: Variants = {
   initial: { scale: 1, rotate: 0 },
 };
 
-const Insights = () => {
-  const { attributes } = insightsData.data;
+interface InsightsSectionProps {
+  data: any;
+}
+
+const Insights: React.FC<InsightsSectionProps> = ({data}) => {
+
+  const insightsHead = data.InsightsHead || {}
+  const cardData = data.card || []
+
+  // console.log("INsights", insightsHead)
+  // console.log("Cards", cardData)
+
+  const {
+    title = '',
+    highlight = '',
+    badgeText = '',
+    buttonText = '',
+    buttonUrl = '#',
+  } = insightsHead
 
   return (
     <div className="w-full min-h-screen bg-active px-4 sm:px-6 md:px-10 py-10 md:py-20 text-foreground">
@@ -78,12 +48,12 @@ const Insights = () => {
           transition={{ duration: 0.5 }}
         >
           <p className="text-xs sm:text-sm font-semibold uppercase border border-primary px-4 py-1 rounded-full">
-            {attributes.badgeText}
+            {badgeText}
           </p>
           <h1
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-                 {attributes.title.split(attributes.highlightedText)[0]}
-                 <span className="text-tertiary">{attributes.highlightedText}</span>
+                 {title.split(highlight)[0]}
+                 <span className="text-tertiary">{highlight}</span>
             </h1>
         </motion.div>
         <motion.div
@@ -92,12 +62,12 @@ const Insights = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Link
-            href={attributes.buttonUrl}
+            href={buttonUrl}
             className="relative bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer overflow-hidden"
           >
             <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
             <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
-              {attributes.buttonText}
+              {buttonText}
             </span>
             <motion.div
               className="bg-primary rounded-full p-1.5 text-secondary"
@@ -113,11 +83,11 @@ const Insights = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 py-10">
-        {attributes.cards.map((card) => (
+        {cardData.map((card: any) => (
           <motion.div
             key={card.id}
             className={`relative rounded-xl p-3 sm:p-5 ${
-              card.overlayImage ? 'bg-primary' : 'bg-white'
+              card.cardId === 2 ? 'bg-primary' : 'bg-white'
             } flex flex-col justify-between`}
             variants={cardVariants}
             initial="hidden"
@@ -127,7 +97,7 @@ const Insights = () => {
             {card.category && (
               <p
                 className={`${
-                  card.overlayImage ? 'text-tertiary text-lg sm:text-xl' : 'text-xs uppercase'
+                  card.cardId === 2 ? 'text-tertiary text-lg sm:text-xl' : 'text-xs uppercase'
                 } mb-4 z-50`}
               >
                 {card.category}
@@ -135,7 +105,7 @@ const Insights = () => {
             )}
             <Image
               src={card.image.url}
-              alt={card.image.alt}
+              alt={card.image.name}
               width={500}
               height={500}
               className="rounded-xl w-full h-auto z-50"
@@ -146,7 +116,7 @@ const Insights = () => {
               </div>
             )}
             <div className="w-full flex items-end justify-end z-50">
-              <Link href={card.buttonUrl}>
+              <Link href={card.url}>
                 <motion.div
                   className="bg-active rounded-full p-1.5 text-primary"
                   variants={buttonVariants}
@@ -158,10 +128,10 @@ const Insights = () => {
                 </motion.div>
               </Link>
             </div>
-            {card.overlayImage && (
+            {card.cardId === 2 && (
               <Image
-                src={card.overlayImage.url}
-                alt={card.overlayImage.alt}
+                src={'/assets/cardstar.svg'}
+                alt={'card overlay'}
                 width={500}
                 height={500}
                 className="rounded-xl absolute right-0 bottom-0 opacity-70 w-full h-auto"
