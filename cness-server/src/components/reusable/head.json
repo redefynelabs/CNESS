@@ -46,9 +46,6 @@
         "videos",
         "audios"
       ]
-    },
-    "highlightTexts": {
-      "type": "json"
     }
   },
   "config": {}

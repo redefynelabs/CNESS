@@ -8,7 +8,8 @@ export interface HomeCards extends Struct.ComponentSchema {
   attributes: {
     icon: Schema.Attribute.Media<'images' | 'files'>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    isBackgroundImage: Schema.Attribute.Boolean;
+    isBackgroundImage: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     linkText: Schema.Attribute.String;
     linkUrl: Schema.Attribute.String;
     statText: Schema.Attribute.String;
@@ -52,6 +53,7 @@ export interface HomeInsightsCard extends Struct.ComponentSchema {
   attributes: {
     cardId: Schema.Attribute.Integer;
     category: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };
@@ -137,7 +139,6 @@ export interface ReusableHead extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     descriptionPosition: Schema.Attribute.Enumeration<['left', 'right']>;
     highlight: Schema.Attribute.String;
-    highlightTexts: Schema.Attribute.JSON;
     imageUrl: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
