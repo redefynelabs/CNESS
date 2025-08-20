@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_reusable_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isPrimary": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

@@ -16,12 +16,6 @@ import Subscribe from "@/component/Home/Subscribe";
 
 export default async function HomePage() {
   // const home = await getHomeData();
-  // const hero = home.HeroBanner?.[0];
-
-
-
-
-
 
   return (
     <main>

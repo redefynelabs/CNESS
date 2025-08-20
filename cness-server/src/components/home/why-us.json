@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_whyuses",
+  "info": {
+    "displayName": "WhyUs"
+  },
+  "options": {},
+  "attributes": {
+    "WhyUsContent": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

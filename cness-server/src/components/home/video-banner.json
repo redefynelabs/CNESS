@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_video_banners",
+  "info": {
+    "displayName": "VideoBanner"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "videos",
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

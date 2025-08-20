@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_insights_cards",
+  "info": {
+    "displayName": "InsightsCard"
+  },
+  "options": {},
+  "attributes": {
+    "cardId": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

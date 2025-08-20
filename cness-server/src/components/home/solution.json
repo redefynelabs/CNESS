@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_solutions",
+  "info": {
+    "displayName": "Solution"
+  },
+  "options": {},
+  "attributes": {
+    "SolutionHead": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "cards": {
+      "type": "component",
+      "component": "home.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

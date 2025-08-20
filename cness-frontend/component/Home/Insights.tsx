@@ -81,7 +81,7 @@ const Insights = () => {
             {attributes.badgeText}
           </p>
           <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
                  {attributes.title.split(attributes.highlightedText)[0]}
                  <span className="text-tertiary">{attributes.highlightedText}</span>
             </h1>

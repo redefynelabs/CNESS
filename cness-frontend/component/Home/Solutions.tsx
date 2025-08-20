@@ -27,7 +27,7 @@ export const solutionsData: SolutionsData = {
     title: "Covering the Full Spectrum of Global Financial Services",
     highlight: "Global Financial Services",
     description: "Explore our cutting-edge solutions to drive your business forward.",
-    badgeText: "Innovate",
+    badgeText: "Solution",
     buttonText: "Learn More",
     buttonUrl: "/solutions",
     descriptionPosition: "right",

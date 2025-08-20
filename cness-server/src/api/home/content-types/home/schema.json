@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "component": "home.hero-section",
+      "repeatable": false
+    },
+    "VideoBanner": {
+      "type": "component",
+      "component": "home.video-banner",
+      "repeatable": false
+    },
+    "IntroHead": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "SolutionSection": {
+      "type": "component",
+      "component": "home.solution",
+      "repeatable": false
+    },
+    "WhyusSection": {
+      "type": "component",
+      "component": "home.why-us",
+      "repeatable": false
+    },
+    "InvestorSection": {
+      "type": "component",
+      "component": "home.investor",
+      "repeatable": false
+    },
+    "InsightsSection": {
+      "type": "component",
+      "component": "home.insights",
+      "repeatable": false
+    },
+    "SubscribeSection": {
+      "type": "component",
+      "component": "home.subscribe",
+      "repeatable": false
+    }
+  }
+}
