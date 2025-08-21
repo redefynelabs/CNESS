@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_contact_contactuses",
+  "info": {
+    "displayName": "ContactUs"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

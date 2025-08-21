@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_company_milestones",
+  "info": {
+    "displayName": "Milestone"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "MilestoneCards": {
+      "type": "component",
+      "component": "company.milestone-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

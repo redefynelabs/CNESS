@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_company_content_wmd_cards",
+  "info": {
+    "displayName": "Content_WMDCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "overlayImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_company_image_wmd_cards",
+  "info": {
+    "displayName": "Image_WMDCard"
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

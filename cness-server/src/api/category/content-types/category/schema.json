@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "category"
+    },
+    "news_and_articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::news-and-article.news-and-article",
+      "mappedBy": "category"
+    }
+  }
+}

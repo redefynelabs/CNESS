@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_contact_contact_details",
+  "info": {
+    "displayName": "ContactDetails"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

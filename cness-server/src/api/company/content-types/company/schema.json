@@ -1,0 +1,58 @@
+{
+  "kind": "singleType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CompanyHero": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "StatsSection": {
+      "type": "component",
+      "component": "company.stats",
+      "repeatable": true
+    },
+    "VisionMissionHead": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "VisionMissionCards": {
+      "type": "component",
+      "component": "company.vision-mission-card",
+      "repeatable": true
+    },
+    "MilestoneSection": {
+      "type": "component",
+      "component": "company.milestone",
+      "repeatable": false
+    },
+    "WhatMakesDifferent": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "ButtonGroups": {
+      "type": "component",
+      "component": "reusable.button",
+      "repeatable": true
+    },
+    "CardGroups": {
+      "type": "dynamiczone",
+      "components": [
+        "company.review-wmd-card",
+        "company.image-wmd-card",
+        "company.content-wmd-card"
+      ]
+    }
+  }
+}

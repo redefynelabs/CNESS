@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_team_comment_sections",
+  "info": {
+    "displayName": "CommentSection"
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Card": {
+      "type": "component",
+      "component": "team.comment-card",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

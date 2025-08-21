@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "Career"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CareerHero": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "Culture": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "AwardsAndRecognition": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "OpenPositionSection": {
+      "type": "component",
+      "component": "career.open-positions",
+      "repeatable": false
+    },
+    "BenefitsSection": {
+      "type": "component",
+      "component": "career.benefits",
+      "repeatable": false
+    }
+  }
+}

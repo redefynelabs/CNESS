@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_solution_modules",
+  "info": {
+    "displayName": "Modules"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "ModulesCard": {
+      "type": "component",
+      "component": "solution.modules-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "investors",
+  "info": {
+    "singularName": "investor",
+    "pluralName": "investors",
+    "displayName": "Investor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "InvestorHead": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "FundingRoundHead": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "FundingRoundCards": {
+      "type": "component",
+      "component": "investor.funding-r-content-card",
+      "repeatable": true
+    },
+    "PitchDeckSection": {
+      "type": "component",
+      "component": "investor.pitch-deck",
+      "repeatable": false
+    },
+    "FAQ": {
+      "type": "component",
+      "component": "investor.investor-faq",
+      "repeatable": false
+    }
+  }
+}

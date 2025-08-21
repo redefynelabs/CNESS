@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_career_open_positions",
+  "info": {
+    "displayName": "OpenPositions",
+    "icon": "collapse"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "AvailableRoles": {
+      "type": "component",
+      "component": "career.roles",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

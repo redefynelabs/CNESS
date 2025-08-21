@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "videos",
+  "info": {
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "VideoSection": {
+      "type": "component",
+      "component": "insights.video",
+      "repeatable": true
+    }
+  }
+}

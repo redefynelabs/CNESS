@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_career_benefits",
+  "info": {
+    "displayName": "Benefits"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "BenfitsSection": {
+      "type": "component",
+      "component": "career.benefit-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

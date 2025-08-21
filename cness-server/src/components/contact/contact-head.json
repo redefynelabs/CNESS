@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_contact_contact_heads",
+  "info": {
+    "displayName": "ContactHead"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "ContactDetails": {
+      "type": "component",
+      "component": "contact.contact-details",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

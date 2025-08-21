@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_team_team_member_cards",
+  "info": {
+    "displayName": "TeamMember_Card"
+  },
+  "options": {},
+  "attributes": {
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "profileLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

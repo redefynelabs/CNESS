@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_contact_office_location_cards",
+  "info": {
+    "displayName": "OfficeLocationCard"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

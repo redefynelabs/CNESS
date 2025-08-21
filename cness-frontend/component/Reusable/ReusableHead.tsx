@@ -12,7 +12,7 @@ interface ReusableHeadData {
   buttonUrl?: string
   descriptionPosition?: string
   buttonPosition?:string
-  imageUrl?: string // New optional prop for the image
+  imageUrl?: any 
 }
 
 interface ReusableHeadProps {
@@ -113,7 +113,7 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
             {badgeText}
           </motion.p>
           <motion.h1
-            className="text-5xl font-medium"
+            className=" text-3xl md:text-5xl font-medium"
             variants={itemVariants}
           >
             {title.split(highlight)[0]}
@@ -178,7 +178,7 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
           variants={imageVariants}
         >
           <img
-            src={imageUrl}
+            src={imageUrl.url}
             alt="Section Image"
             className="w-full h-auto object-cover rounded-3xl"
           />

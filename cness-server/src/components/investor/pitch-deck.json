@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_investor_pitch_decks",
+  "info": {
+    "displayName": "PitchDeck"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

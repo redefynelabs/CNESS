@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "teams",
+  "info": {
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TeamHero": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "OurPeople": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "TeamMembersSection": {
+      "type": "component",
+      "component": "team.team-member-card",
+      "repeatable": true
+    },
+    "CommentSection": {
+      "type": "component",
+      "component": "team.comment-section",
+      "repeatable": false
+    }
+  }
+}

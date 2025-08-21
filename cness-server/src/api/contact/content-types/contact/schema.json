@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ContactHero": {
+      "type": "component",
+      "component": "contact.contact-head",
+      "repeatable": false
+    },
+    "ContactForm": {
+      "type": "component",
+      "component": "contact.contact-us",
+      "repeatable": false
+    },
+    "OfficeLocationSection": {
+      "type": "component",
+      "component": "contact.office-location",
+      "repeatable": false
+    },
+    "FreeConsultation": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    }
+  }
+}

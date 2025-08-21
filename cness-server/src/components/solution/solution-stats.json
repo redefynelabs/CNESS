@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_solution_solution_stats",
+  "info": {
+    "displayName": "SolutionStats"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

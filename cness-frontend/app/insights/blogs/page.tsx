@@ -1,12 +1,13 @@
-import { UnderDevelopment } from '@/component/UnderDev'
+import BlogsCardSection from '@/component/Insights/BlogsCardSection'
+import { fetchBlogs } from '@/utils/Blog/fetchBlogs'
 import React from 'react'
 
-const page = () => {
+export default async function BlogsPage() {
+  const blogData = await fetchBlogs(); // blogData is already array
+
   return (
     <div>
-      <UnderDevelopment />
+      <BlogsCardSection blogs={blogData} /> {/* pass array directly */}
     </div>
   )
 }
-
-export default page

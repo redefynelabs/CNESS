@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_career_roles",
+  "info": {
+    "displayName": "Roles",
+    "icon": "connector"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "string"
+    },
+    "applyLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

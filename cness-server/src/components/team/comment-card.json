@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_team_comment_cards",
+  "info": {
+    "displayName": "CommentCard",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "comment": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "Button": {
+      "type": "component",
+      "component": "reusable.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

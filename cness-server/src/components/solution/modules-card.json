@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_solution_modules_cards",
+  "info": {
+    "displayName": "ModulesCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Values": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

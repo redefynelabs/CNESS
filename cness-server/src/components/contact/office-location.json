@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_contact_office_locations",
+  "info": {
+    "displayName": "OfficeLocation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "OfficeLocationCards": {
+      "type": "component",
+      "component": "contact.office-location-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_company_review_wmd_cards",
+  "info": {
+    "displayName": "Review_WMDCard"
+  },
+  "options": {},
+  "attributes": {
+    "comment": {
+      "type": "string"
+    },
+    "authorName": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

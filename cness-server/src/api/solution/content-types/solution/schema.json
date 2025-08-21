@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "solutions",
+  "info": {
+    "singularName": "solution",
+    "pluralName": "solutions",
+    "displayName": "Solution"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SolutionHero": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "PlatformSection": {
+      "type": "component",
+      "component": "reusable.head",
+      "repeatable": false
+    },
+    "Stats": {
+      "type": "component",
+      "component": "solution.solution-stats",
+      "repeatable": true
+    },
+    "PlatformModulesSection": {
+      "type": "component",
+      "component": "solution.modules",
+      "repeatable": false
+    },
+    "TechAndInnovationSection": {
+      "type": "component",
+      "component": "solution.techno-section",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_investor_ifaq_q_as",
+  "info": {
+    "displayName": "IFAQ_QAs"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

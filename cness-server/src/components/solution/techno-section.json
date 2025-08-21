@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_solution_techno_sections",
+  "info": {
+    "displayName": "TechnoSection"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "TechnoCards": {
+      "type": "component",
+      "component": "solution.techno-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
