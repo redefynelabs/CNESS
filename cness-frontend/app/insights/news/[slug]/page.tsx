@@ -4,13 +4,14 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { fetchBlogBySlug } from "@/utils/Blog/fetchBlogs";
 
-interface NewsPageProps {
-    params: { slug: string };
-}
+type Params = Promise<{ slug: string }>
 
-export default async function NewsPage({ params }: NewsPageProps) {
 
-    const news = await fetchBlogBySlug(params.slug);
+export default async function NewsPage({ params }: { params: Params }) {
+
+    const { slug } = await params;
+
+    const news = await fetchBlogBySlug(slug);
 
     console.log(news)
 
@@ -20,19 +21,19 @@ export default async function NewsPage({ params }: NewsPageProps) {
 
             <div className=" flex flex-col items-center justify-center gap-4 text-center max-w-4xl mx-auto">
 
-            <div className=" border border-gray-400 rounded-full px-6 py-2">
-                <p>{news.category && <span>{news.category.name}</span>}</p>
-            </div>
-            {/* Title */}
-            <h1 className="text-3xl md:text-5xl font-medium mb-6 text-gray-900">
-                {news.title}
-            </h1>
+                <div className=" border border-gray-400 rounded-full px-6 py-2">
+                    <p>{news.category && <span>{news.category.name}</span>}</p>
+                </div>
+                {/* Title */}
+                <h1 className="text-3xl md:text-5xl font-medium mb-6 text-gray-900">
+                    {news.title}
+                </h1>
 
-            {/* Category & Author */}
-            <div className=" mb-6 text-sm text-gray-500">
-                {news.author && <span>By {news.author.name}</span>}
-                <span>{new Date(news.publishedAt).toLocaleDateString()}</span>
-            </div>
+                {/* Category & Author */}
+                <div className=" mb-6 text-sm text-gray-500">
+                    {news.author && <span>By {news.author.name}</span>}
+                    <span>{new Date(news.publishedAt).toLocaleDateString()}</span>
+                </div>
             </div>
 
 
