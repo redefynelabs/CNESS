@@ -18,7 +18,7 @@ export default async function TeamPage() {
       <div className=' bg-gradient-to-b from-active to-white mt-20 py-10 rounded-3xl'>
         <ReusableHead data={teamHeroData.TeamHero} />
       </div>
-      <div className=' py-6'>
+      <div className=' pt-6 pb-16'>
         <ReusableHead data={ourPeopleData.OurPeople} />
       </div>
       <div>

@@ -792,6 +792,10 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
       'solution.techno-section',
       false
     >;
+    TechnoBottomCards: Schema.Attribute.Component<
+      'solution.techno-bottom-card',
+      true
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

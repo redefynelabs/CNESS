@@ -2,12 +2,13 @@ import ReusableHead from '@/component/Reusable/ReusableHead'
 import { UnderDevelopment } from '@/component/UnderDev'
 import React from 'react';
 import heroData from '@/data/Services/Hero.json'
-import { fetchPlatform, fetchPlatformModule, fetchSolStats, fetchSolutionsHero, fetchTechnoSection } from '@/utils/Solution/fetchSolutions';
+import { fetchPlatform, fetchPlatformModule, fetchSolStats, fetchSolutionsHero, fetchTechnoBottomCard, fetchTechnoSection } from '@/utils/Solution/fetchSolutions';
 import SolutionStats from '@/component/Solutions/SolutionStats';
 import PlatformModules from '@/component/Solutions/PlatformModules';
 import TechnoSection from '@/component/Solutions/TechnoSection';
 import WhyUs from '@/component/Home/WhyUs';
 import { fetchWhyUs } from '@/utils/Home/fetchWhyUs';
+import TechnoBottomCard from '@/component/Solutions/TechnoBottomCard';
 
 export default async function SolutionPage(){
   const solutionHead = await fetchSolutionsHero();
@@ -15,6 +16,7 @@ export default async function SolutionPage(){
   const SolutionData = await fetchSolStats();
   const PlatformModulesData = await fetchPlatformModule();
   const TechnoData = await fetchTechnoSection();
+  const TechnoBottomCardData = await fetchTechnoBottomCard();
   const whyUsData = await fetchWhyUs();
 
   console.log(PlatformModules)
@@ -35,6 +37,9 @@ export default async function SolutionPage(){
       </div>
       <div>
         <TechnoSection data={TechnoData.TechAndInnovationSection} />
+      </div>
+      <div>
+        <TechnoBottomCard data={TechnoBottomCardData.TechnoBottomCards} />
       </div>
       <div>
         <WhyUs data={whyUsData} />

@@ -53,7 +53,7 @@ const BenefitsCard: React.FC<BenefitsCardProps> = ({ data }) => {
 
             {/* Text Section */}
             <div className="bg-active rounded-xl p-4 w-full text-start">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
+              <h3 className="text-lg font-medium text-foreground mb-2">
                 {card.title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">

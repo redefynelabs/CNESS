@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface FundingRoundCardProps {
@@ -15,24 +16,26 @@ const FRCards: React.FC<FundingRoundCardProps> = ({ data }) => {
         let cardClasses = "";
         if (isContentCard) {
           if (index === 0) {
-            cardClasses = "bg-primary text-white p-6";
+            cardClasses = "bg-primary text-light p-8";
           } else if (index === data.length - 1) {
-            cardClasses = "bg-tertiary text-foreground p-6 border-gray-700";
+            cardClasses = "bg-tertiary text-foreground p-8  border-primary";
           } else {
-            cardClasses = "bg-primary text-white p-6"; // fallback for middle text cards
+            cardClasses = "bg-primary text-light p-8  border-gray-300"; // fallback for middle text cards
           }
         }
 
         return (
           <div
             key={card.id}
-            className={`rounded-2xl shadow-lg overflow-hidden ${cardClasses}`}
+            className={`rounded-2xl overflow-hidden ${cardClasses}`}
           >
             {/* Image only card */}
             {isImageCard && (
-              <img
+              <Image
                 src={card?.image?.url}
                 alt={"Funding Round Image"}
+                width={500}
+                height={500}
                 className="w-full h-full object-cover rounded-2xl"
               />
             )}
@@ -40,15 +43,20 @@ const FRCards: React.FC<FundingRoundCardProps> = ({ data }) => {
             {/* Content card */}
             {isContentCard && (
               <div className="flex flex-col h-full justify-between gap-4">
-                <div className="space-y-4 flex flex-col">
-                  {card.badgeText && (
-                    <span className="px-4 py-1 border border-gray-200 rounded-full text-sm font-semibold w-fit">
-                      {card.badgeText}
-                    </span>
-                  )}
-                  {card.title && (
-                    <h3 className="text-xl font-medium">{card.title}</h3>
-                  )}
+                <div className="space-y-4 flex gap-4">
+                  <div className=" space-y-8 flex flex-col">
+                    {card.badgeText && (
+                      <span className="px-4 py-1 border  rounded-full text-xs font-medium w-fit uppercase">
+                        {card.badgeText}
+                      </span>
+                    )}
+                    {card.title && (
+                      <h3 className=" text-3xl font-[400]">{card.title}</h3>
+                    )}
+                  </div>
+                  <div>
+                    <Image src={'/assets/star-tertiary.svg'} alt="Star" width={30} height={30} />
+                  </div>
                 </div>
 
                 {card.description && (

@@ -102,7 +102,7 @@ const Solutions = ({ data }: SolutionsProps) => {
                 whileHover="hover"
               >
                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                   {buttonText}
                 </span>
                 <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">
@@ -130,7 +130,7 @@ const Solutions = ({ data }: SolutionsProps) => {
                 whileHover="hover"
               >
                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                   {buttonText}
                 </span>
                 <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">
@@ -150,7 +150,7 @@ const Solutions = ({ data }: SolutionsProps) => {
             {cards.map((card, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-start justify-between bg-tertiary rounded-2xl shadow-lg overflow-hidden aspect-[3/4] text-primary"
+                className="flex flex-col items-start justify-between bg-tertiary rounded-2xl shadow-lg overflow-hidden text-primary space-y-8"
                 variants={cardVariants}
               >
                 <Image
@@ -158,7 +158,7 @@ const Solutions = ({ data }: SolutionsProps) => {
                   alt={`Card ${index + 1}`}
                   width={200}
                   height={200}
-                  className=" object-cover"
+                  className=" object-cover w-11/12"
                 />
                 <div className=" py-5 px-4 w-full flex items-end justify-end group">
                   <motion.a

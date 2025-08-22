@@ -99,7 +99,7 @@ const WhyUs = ({ data }: WhyUsProps) => {
 
                     <div className="space-y-4 sm:space-y-6">
                         <motion.h1
-                            className="font-semibold text-xl sm:text-3xl md:text-4xl inline-flex md:flex-col items-start"
+                            className="font-medium text-xl sm:text-3xl md:text-4xl inline-flex md:flex-col items-start"
                             variants={itemVariants}
                         >
                             {title.split('{highlight}')[0]}
@@ -142,7 +142,7 @@ const WhyUs = ({ data }: WhyUsProps) => {
                                             whileHover="hover"
                                             transition={{ duration: 0.5, ease: 'easeOut' }}
                                         />
-                                        <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                                        <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                                             {buttonText}
                                         </span>
                                         <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">

@@ -361,7 +361,7 @@ const Navbar = () => {
               whileTap="tap"
               className='bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer '
             >
-              <Link href={'/contact'} className='text-base font-semibold'>Contact</Link>
+              <Link href={'/contact'} className='text-base font-medium'>Contact</Link>
               <motion.div
                 variants={contactArrowVariants}
                 initial="initial"
@@ -531,7 +531,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={'/contact'}
-                    className='text-lg font-semibold flex-1 text-center'
+                    className='text-lg font-medium flex-1 text-center'
                     onClick={() => setIsOpen(false)}
                   >
                     Contact Us

@@ -85,7 +85,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                         >
                             <div className={`relative px-4 sm:px-6 py-2 sm:py-3 ${button.isPrimary ? 'bg-primary !text-light' : 'bg-white !text-foreground border border-gray-300'} rounded-full overflow-hidden transition-all duration-500 group-hover:bg-transparent`}>
                                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                                <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                                <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                                     {button.text}
                                 </span>
                             </div>
@@ -149,9 +149,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                             height={40}
                                         />
                                         <div className='space-y-2'>
-                                            <p className="text-base font-semibold">{card.statText}</p>
+                                            <p className="text-base font-medium">{card.statText}</p>
                                             <motion.h1
-                                                className="text-2xl font-semibold text-primary"
+                                                className="text-2xl font-medium text-primary"
                                                 viewport={{ once: true }}
                                             >
                                                 {card.statValue}
@@ -173,7 +173,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                             >
                                 {card.title && (
                                     <div className='flex md:flex-col justify-between w-full md:w-[40%] p-4 md:p-2'>
-                                        <h1 className='text-2xl font-semibold'>{card.title}</h1>
+                                        <h1 className='text-2xl font-medium'>{card.title}</h1>
                                         {card.linkText && (
                                             <div className='group flex items-center space-x-2 text-sm'>
                                                 <Link href={card.linkUrl}>{card.linkText}</Link>
@@ -185,7 +185,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                     </div>
                                 )}
 
-                                <div className='bg-white rounded-2xl px-6 py-4 flex justify-between w-full space-x-4 items-end'>
+                                <div className='bg-white rounded-2xl px-6 py-4 flex justify-between w-full space-x-8 items-end'>
                                     <div className=' flex flex-col justify-between space-y-10'>
                                         <Image
                                             src={card.icon.url}
@@ -194,9 +194,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                             height={40}
                                         />
                                         <div className='space-y-2'>
-                                            <p className='text-base font-semibold'>{card.statText}</p>
+                                            <p className='text-base font-medium'>{card.statText}</p>
                                             <motion.h1
-                                                className='text-2xl font-semibold text-primary'
+                                                className='text-2xl font-medium text-primary'
                                             >
                                                 {card.statValue}
                                             </motion.h1>
@@ -204,13 +204,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
 
                                     </div>
                                     {card.image && (
-                                        <div>
+                                        <div className=' w-full'>
                                             <Image
                                                 src={card.image.url}
                                                 alt={'Image'}
                                                 width={100}
                                                 height={100}
-                                                className=' rounded-2xl'
+                                                className=' rounded-2xl w-full'
                                             />
                                         </div>
                                     )}

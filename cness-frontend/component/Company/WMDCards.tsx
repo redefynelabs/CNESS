@@ -32,7 +32,7 @@ const WMDCards: React.FC<WMDCardsProps> = ({ data }) => {
                                 </div>
                                 <div>
 
-                                    <p className="italic text-lg text-gray-700 mb-4">{card.comment}</p>
+                                    <p className=" text-lg text-gray-700 mb-4">{card.comment}</p>
 
                                     <div className=" flex items-center justify-start space-x-2">
 
@@ -47,8 +47,8 @@ const WMDCards: React.FC<WMDCardsProps> = ({ data }) => {
                                         )}
                                         <div className=" ">
 
-                                            <p className="font-semibold text-foreground">{card.authorName}</p>
-                                            <p className="text-sm text-gray-500 ">{card.profession}</p>
+                                            <p className="font-medium text-foreground">{card.authorName}</p>
+                                            <p className="text-xs uppercase text-gray-500 ">{card.profession}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -57,10 +57,14 @@ const WMDCards: React.FC<WMDCardsProps> = ({ data }) => {
                                 {card.buttonText && (
                                     <Link
                                         href={card.buttonUrl || "#"}
-                                        className="group inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-light font-medium transition hover:bg-tertiary hover:text-foreground"
+                                        className="group inline-flex items-center "
                                     >
-                                        {card.buttonText}
-                                        <ArrowUpRight size={18} className="group-hover:rotate-45 transition" />
+                                        <h1 className="bg-primary text-light font-medium transition group-hover:bg-tertiary group-hover:text-foreground  px-5 py-2 rounded-full">
+                                            {card.buttonText}
+                                        </h1>
+                                        <p className="bg-primary text-light font-medium transition group-hover:bg-tertiary group-hover:text-foreground p-3 rounded-full">
+                                            <ArrowUpRight size={18} className="group-hover:animate-spin transition" />
+                                        </p>
                                     </Link>
                                 )}
                             </div>
@@ -98,13 +102,13 @@ const WMDCards: React.FC<WMDCardsProps> = ({ data }) => {
                                 {card.year && (
                                     <span className="text-sm text-secondary opacity-80">Published: {card.year}</span>
                                 )}
-                                 <Image
-                                        src={'/assets/cardstar.svg'}
-                                        alt={ "Background"}
-                                        width={200}
-                                        height={200}
-                                        className="w-full h-auto object-cover rounded-2xl absolute bottom-0 right-0"
-                                    />
+                                <Image
+                                    src={'/assets/cardstar.svg'}
+                                    alt={"Background"}
+                                    width={200}
+                                    height={200}
+                                    className="w-full h-auto object-cover rounded-2xl absolute bottom-0 right-0"
+                                />
                             </div>
                         );
 

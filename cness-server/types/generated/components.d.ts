@@ -455,6 +455,22 @@ export interface SolutionSolutionStats extends Struct.ComponentSchema {
   };
 }
 
+export interface SolutionTechnoBottomCard extends Struct.ComponentSchema {
+  collectionName: 'components_solution_techno_bottom_cards';
+  info: {
+    displayName: 'TechnoBottomCard';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    buttonUrl: Schema.Attribute.String;
+    desc: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    stat: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SolutionTechnoCard extends Struct.ComponentSchema {
   collectionName: 'components_solution_techno_cards';
   info: {
@@ -559,6 +575,7 @@ declare module '@strapi/strapi' {
       'solution.modules': SolutionModules;
       'solution.modules-card': SolutionModulesCard;
       'solution.solution-stats': SolutionSolutionStats;
+      'solution.techno-bottom-card': SolutionTechnoBottomCard;
       'solution.techno-card': SolutionTechnoCard;
       'solution.techno-section': SolutionTechnoSection;
       'team.comment-card': TeamCommentCard;

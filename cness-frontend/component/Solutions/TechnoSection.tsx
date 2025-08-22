@@ -26,7 +26,7 @@ const TechnoSection: React.FC<TechnoProps> = ({ data }) => {
   return (
     <div className="py-14 px-4 md:px-10">
       {/* Section Header */}
-      <div className="text-center mb-12 flex items-center flex-col gap-6 max-w-2xl mx-auto">
+      <div className="text-center mb-12 flex items-center flex-col gap-6 max-w-4xl mx-auto">
         <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300 text-foreground">
           {data.badgeText}
         </p>
@@ -54,13 +54,13 @@ const TechnoSection: React.FC<TechnoProps> = ({ data }) => {
             </div>
 
             {/* Card Footer */}
-            <div className="py-5 px-4 flex items-end justify-end group mt-auto">
+            <div className="py-5 px-4 flex items-end justify-end  mt-auto">
               <Link
                 href={card.link}
-                className="relative flex w-full justify-between items-center text-lg font-medium hover:text-tertiary transition-colors"
+                className="relative flex w-full justify-between items-center text-lg font-medium text-foreground hover:text-primary transition-colors gap-4 group"
               >
                 {card.title}
-                <div className="bg-light rounded-full p-1.5 text-primary group-hover:animate-spin transition-transform">
+                <div className="bg-light rounded-full p-3 text-primary group-hover:bg-primary group-hover:text-light group-hover:animate-spin  transition-colors">
                   <ArrowUpRight size={20} />
                 </div>
               </Link>

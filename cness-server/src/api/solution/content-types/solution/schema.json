@@ -35,6 +35,11 @@
       "type": "component",
       "component": "solution.techno-section",
       "repeatable": false
+    },
+    "TechnoBottomCards": {
+      "type": "component",
+      "component": "solution.techno-bottom-card",
+      "repeatable": true
     }
   }
 }

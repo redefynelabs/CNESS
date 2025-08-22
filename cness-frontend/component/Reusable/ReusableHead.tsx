@@ -11,7 +11,7 @@ interface ReusableHeadData {
   buttonText?: string
   buttonUrl?: string
   descriptionPosition?: string
-  buttonPosition?:string
+  buttonPosition?: string
   imageUrl?: any 
 }
 
@@ -29,10 +29,9 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
     buttonUrl = '#',
     descriptionPosition = 'right',
     buttonPosition = 'left',
-    imageUrl, // Destructure the new imageUrl prop
+    imageUrl,
   } = data
 
-  // Animation variants
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -88,22 +87,21 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
     },
   }
 
-  // Determine layout
   const isDescriptionLeft = description && descriptionPosition === 'left'
   const isButtonLeft = buttonText && buttonPosition === 'left'
 
   return (
     <motion.div
-      className="  px-4 md:px-6 lg:px-10 text-foreground flex flex-col"
+      className="px-4 md:px-6 lg:px-10 text-foreground flex flex-col"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      <div className="flex flex-col md:flex-row items-end justify-between gap-6">
-        {/* Left Side: Always contains badge and heading, optionally description and/or button */}
+      <div className="flex flex-col md:flex-row justify-between gap-6">
+        {/* Left Side: Content aligned to start */}
         <motion.div
-          className="flex flex-col items-start space-y-6 max-w-2xl order-1"
+          className="flex flex-col items-start justify-start space-y-6 max-w-2xl order-1"
           variants={itemVariants}
         >
           <motion.p
@@ -113,14 +111,14 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
             {badgeText}
           </motion.p>
           <motion.h1
-            className=" text-3xl md:text-5xl font-medium"
+            className="text-3xl md:text-5xl font-medium"
             variants={itemVariants}
           >
             {title.split(highlight)[0]}
             <span className="text-tertiary">{highlight}</span>
           </motion.h1>
           {isDescriptionLeft && (
-            <motion.p className="text-lg" variants={itemVariants}>
+            <motion.p className="text-base" variants={itemVariants}>
               {description}
             </motion.p>
           )}
@@ -132,7 +130,7 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
               whileHover="hover"
             >
               <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-              <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+              <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                 {buttonText}
               </span>
               <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">
@@ -142,13 +140,13 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
           )}
         </motion.div>
 
-        {/* Right Side: Optionally contains description and/or button */}
+        {/* Right Side: Content aligned to end */}
         <motion.div
-          className="flex flex-col items-start space-y-6 max-w-md order-2"
+          className="flex flex-col items-end justify-end space-y-6 max-w-xl order-2"
           variants={itemVariants}
         >
           {!isDescriptionLeft && description && (
-            <motion.p className="text-lg" variants={itemVariants}>
+            <motion.p className="text-base" variants={itemVariants}>
               {description}
             </motion.p>
           )}
@@ -160,7 +158,7 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
               whileHover="hover"
             >
               <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-              <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+              <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                 {buttonText}
               </span>
               <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">

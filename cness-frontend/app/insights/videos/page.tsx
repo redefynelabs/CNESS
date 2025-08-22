@@ -1,12 +1,13 @@
-import { UnderDevelopment } from '@/component/UnderDev'
-import React from 'react'
+import VideoCardSection from "@/component/Insights/VideoCardSection";
+import { fetchVideoPage } from "@/utils/Videos/fetchVideo";
+import React from "react";
 
-const page = () => {
+export default async function VideoPage() {
+  const videoData = await fetchVideoPage();
+
   return (
     <div>
-      <UnderDevelopment />
+      <VideoCardSection videos={videoData.VideoSection} />
     </div>
-  )
+  );
 }
-
-export default page

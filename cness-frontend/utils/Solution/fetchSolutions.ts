@@ -40,3 +40,11 @@ export async function fetchTechnoSection() {
 
   return Techno;
 }
+
+export async function fetchTechnoBottomCard() {
+  const data = await fetchFromStrapi('/solution?populate[TechnoBottomCards][populate]=icon');
+
+  const TechnoBottomCard = data.data;
+
+  return TechnoBottomCard;
+}

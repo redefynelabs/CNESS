@@ -37,7 +37,7 @@ const Footer = () => {
                             className='w-24 sm:w-28 lg:w-32 h-auto'
                         />
                         <div className='space-y-4'>
-                            <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold'>
+                            <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium'>
                                 Ready to <span className='text-tertiary'>Take Control</span> of your Finances?
                             </h1>
                             <p className='text-base sm:text-lg'>We look forward to learning about your financial goals.</p>
@@ -48,7 +48,7 @@ const Footer = () => {
                         >
                             <div className="relative px-4 sm:px-6 py-2 sm:py-3 bg-primary text-light rounded-full overflow-hidden transition-all duration-500 group-hover:bg-transparent">
                                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                                <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                                <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                                     Free Consultation
                                 </span>
                             </div>
@@ -64,16 +64,16 @@ const Footer = () => {
                     {/* Contact Info */}
                     <div className='flex flex-col sm:flex-row gap-6 lg:gap-10 w-full lg:w-1/2 animate-fade-in-up animation-delay-200'>
                         <div className='space-y-4 flex-1'>
-                            <p className='uppercase font-semibold text-sm sm:text-base'>Contact us</p>
+                            <p className='uppercase font-medium text-sm sm:text-base'>Contact us</p>
                             <div className='space-y-3'>
                                 <div>
-                                    <p className='text-sm sm:text-base font-semibold'>Our Phone</p>
+                                    <p className='text-sm sm:text-base font-medium'>Our Phone</p>
                                     <Link href={'tel:'} className='text-base sm:text-lg text-tertiary hover:text-primary transition-colors duration-300'>
                                         +1(122)800 88 08
                                     </Link>
                                 </div>
                                 <div>
-                                    <p className='text-sm sm:text-base font-semibold'>Our Email</p>
+                                    <p className='text-sm sm:text-base font-medium'>Our Email</p>
                                     <Link href={'mailto:'} className='text-base sm:text-lg text-tertiary hover:text-primary transition-colors duration-300'>
                                         office@cness.com
                                     </Link>
@@ -83,13 +83,13 @@ const Footer = () => {
                         <div className='space-y-4 flex-1'>
                             <div className='space-y-3'>
                                 <div>
-                                    <p className='text-sm sm:text-base font-semibold'>Mon-Fri:</p>
+                                    <p className='text-sm sm:text-base font-medium'>Mon-Fri:</p>
                                     <p className='text-base sm:text-lg text-tertiary hover:text-primary transition-colors duration-300'>
                                         8:30am-5:30pm
                                     </p>
                                 </div>
                                 <div>
-                                    <p className='text-sm sm:text-base font-semibold'>Address</p>
+                                    <p className='text-sm sm:text-base font-medium'>Address</p>
                                     <p className='text-base sm:text-lg text-tertiary hover:text-primary transition-colors duration-300'>
                                         San Francisco,<br /> 1140 Harrison St, CA 94103
                                     </p>
@@ -107,7 +107,7 @@ const Footer = () => {
                         <Link 
                             key={idx} 
                             href={link.slug} 
-                            className='font-semibold text-sm sm:text-base hover:text-primary transition-colors duration-300 animate-fade-in-up'
+                            className='font-medium text-sm sm:text-base hover:text-primary transition-colors duration-300 animate-fade-in-up'
                             style={{animationDelay: `${idx * 100}ms`}}
                         >
                             {link.title}

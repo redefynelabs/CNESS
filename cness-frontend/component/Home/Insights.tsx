@@ -47,11 +47,11 @@ const Insights: React.FC<InsightsSectionProps> = ({data}) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-xs sm:text-sm font-semibold uppercase border border-primary px-4 py-1 rounded-full">
+          <p className="text-xs sm:text-sm font-medium uppercase border border-primary px-4 py-1 rounded-full">
             {badgeText}
           </p>
           <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">
                  {title.split(highlight)[0]}
                  <span className="text-tertiary">{highlight}</span>
             </h1>
@@ -66,7 +66,7 @@ const Insights: React.FC<InsightsSectionProps> = ({data}) => {
             className="relative bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer overflow-hidden"
           >
             <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-            <span className="relative z-10 font-semibold group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+            <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
               {buttonText}
             </span>
             <motion.div
@@ -112,7 +112,7 @@ const Insights: React.FC<InsightsSectionProps> = ({data}) => {
             />
             {card.title && (
               <div className="py-4 space-y-4">
-                <h1 className="text-lg sm:text-xl md:text-2xl font-semibold">{card.title}</h1>
+                <h1 className="text-lg sm:text-xl md:text-2xl font-medium">{card.title}</h1>
               </div>
             )}
             <div className="w-full flex items-end justify-end z-50">

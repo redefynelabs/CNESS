@@ -48,7 +48,7 @@ const TeamMembersSection: React.FC<TeamMembersProps> = ({ data }) => {
             {members.map((member) => (
               <div
                 key={member.id}
-                className="p-4 rounded-3xl bg-white flex flex-col items-center text-center transition"
+                className="p-4 rounded-3xl bg-white flex flex-col items-center text-start transition"
               >
                 {/* Avatar */}
                 <div className="mb-4 p-6">
@@ -64,7 +64,7 @@ const TeamMembersSection: React.FC<TeamMembersProps> = ({ data }) => {
                 <div className="flex w-full justify-between border-t border-gray-300 py-4">
                   <div>
                     {/* Name */}
-                    <h3 className="text-lg font-semibold">{member.name}</h3>
+                    <h3 className="text-lg font-medium">{member.name}</h3>
                     {/* Role */}
                     <p className="text-sm text-gray-500">{member.role}</p>
                   </div>
