@@ -60,19 +60,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
         {/* Empty State */}
         <div className="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-2xl shadow-sm border border-gray-100">
           {/* Optional Illustration (placeholder icon) */}
-          <svg
-            className="w-20 h-20 text-gray-300 mb-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={1.5}
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v12m6-6H6"
-            />
-          </svg>
+          <Image src={'/assets/not-found.jpg'} alt="NotFound.jpg" width={500} height={500} />
 
           <h3 className="text-lg font-medium text-gray-700 mb-2">
             No blogs found
