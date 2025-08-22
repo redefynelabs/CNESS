@@ -37,7 +37,7 @@ export function UnderDevelopment() {
         </p>
   
         <div
-          className="px-6 py-3 rounded-full font-medium"
+          className="px-6 py-3 rounded-full font-[450]"
           style={{
             backgroundColor: "var(--color-active)",
             color: "var(--color-primary)",

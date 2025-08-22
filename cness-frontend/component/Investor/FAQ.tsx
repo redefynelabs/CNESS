@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface FAQProps {
   data: {
@@ -31,7 +32,7 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
             <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300 inline-block">
               {data.badgeText}
             </p>
-            <h2 className="text-3xl md:text-5xl font-medium leading-tight">
+            <h2 className="text-3xl md:text-5xl font-[450] leading-tight">
               {data.title}
             </h2>
             <p className="text-gray-500">{data.description}</p>
@@ -39,10 +40,10 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
           <div>
             <button
               type="button"
-              className="relative bg-primary group text-light px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 cursor-pointer overflow-hidden"
+              className="relative bg-primary group text-light px-6 py-3 rounded-full font-[450] flex items-center justify-center gap-2 cursor-pointer overflow-hidden"
             >
               <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-              <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+              <span className="relative z-10 font-[450] group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                 {data.buttonText}
               </span>
             </button>
@@ -54,11 +55,11 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
           {data.QAs.map((qa, index) => (
             <div
               key={index}
-              className="border-b border-gray-200  overflow-hidden"
+              className="border-b border-gray-200 overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-5 py-4 text-left font-medium text-lg transition"
+                className="w-full flex items-center justify-between px-5 py-4 text-left font-[450] text-lg transition"
               >
                 {qa.question}
                 <ChevronDown
@@ -67,11 +68,23 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
                   }`}
                 />
               </button>
-              {openIndex === index && (
-                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">
-                  {qa.answer}
-                </div>
-              )}
+
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="px-5 overflow-hidden"
+                  >
+                    <div className="pb-4 text-gray-600 text-sm leading-relaxed">
+                      {qa.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

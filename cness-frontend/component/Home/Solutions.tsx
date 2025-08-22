@@ -83,7 +83,7 @@ const Solutions = ({ data }: SolutionsProps) => {
               {badgeText}
             </motion.p>
             <motion.h1
-              className=" text-2xl md:text-5xl font-medium"
+              className=" text-2xl md:text-5xl font-[450]"
               variants={itemVariants}
             >
               {title.split(highlight)[0]}
@@ -97,12 +97,12 @@ const Solutions = ({ data }: SolutionsProps) => {
             {isButtonLeft && buttonText && (
               <motion.a
                 href={buttonUrl}
-                className="relative bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer overflow-hidden "
+                className="relative bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-[450] items-center justify-center gap-3 cursor-pointer overflow-hidden "
                 variants={buttonVariants}
                 whileHover="hover"
               >
                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                <span className="relative z-10 font-[450] group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                   {buttonText}
                 </span>
                 <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">
@@ -125,12 +125,12 @@ const Solutions = ({ data }: SolutionsProps) => {
             {!isButtonLeft && buttonText && (
               <motion.a
                 href={buttonUrl}
-                className="relative bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer overflow-hidden"
+                className="relative bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-[450] items-center justify-center gap-3 cursor-pointer overflow-hidden"
                 variants={buttonVariants}
                 whileHover="hover"
               >
                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                <span className="relative z-10 font-[450] group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                   {buttonText}
                 </span>
                 <div className="bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin">

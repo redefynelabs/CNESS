@@ -34,10 +34,10 @@ const VideoCardSection: React.FC<VideoCardSectionProps> = ({ videos }) => {
                     transition={{ duration: 0.6 }}
                     className="text-start mb-12 flex flex-col items-start gap-4"
                 >
-                    <p className="text-xs tracking-wider uppercase px-4 py-1 rounded-full border border-gray-200 text-primary font-medium">
+                    <p className="text-xs tracking-wider uppercase px-4 py-1 rounded-full border border-gray-200 text-primary font-[450]">
                         Videos
                     </p>
-                    <h2 className="text-3xl md:text-5xl font-medium leading-tight text-foreground max-w-3xl">
+                    <h2 className="text-3xl md:text-5xl font-[450] leading-tight text-foreground max-w-3xl">
                         Watch Our <span className="text-tertiary">Expert Videos</span>
                     </h2>
                 </motion.div>
@@ -50,7 +50,7 @@ const VideoCardSection: React.FC<VideoCardSectionProps> = ({ videos }) => {
                         width={400}
                         height={400}
                     />
-                    <h3 className="text-lg font-medium text-gray-700 mb-2">
+                    <h3 className="text-lg font-[450] text-gray-700 mb-2">
                         No Videos found
                     </h3>
                     <p className="text-gray-500 max-w-md">
@@ -59,7 +59,7 @@ const VideoCardSection: React.FC<VideoCardSectionProps> = ({ videos }) => {
                     </p>
                     <Link
                         href="/insights/blogs"
-                        className="mt-6 px-6 py-3 bg-primary hover:bg-tertiary text-light font-medium rounded-full transition-colors duration-300"
+                        className="mt-6 px-6 py-3 bg-primary hover:bg-tertiary text-light font-[450] rounded-full transition-colors duration-300"
                     >
                         Explore Blogs
                     </Link>
@@ -81,7 +81,7 @@ const VideoCardSection: React.FC<VideoCardSectionProps> = ({ videos }) => {
                 <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300">
                     Videos
                 </p>
-                <h2 className="text-3xl md:text-5xl font-medium">
+                <h2 className="text-3xl md:text-5xl font-[450]">
                     Watch Our <span className="text-tertiary">Expert Videos</span>
                 </h2>
             </motion.div>
@@ -120,7 +120,7 @@ const VideoCardSection: React.FC<VideoCardSectionProps> = ({ videos }) => {
 
 
                         {/* Title */}
-                        <h3 className="text-lg sm:text-xl font-medium text-foreground group-hover:text-primary">
+                        <h3 className="text-lg sm:text-xl font-[450] text-foreground group-hover:text-primary">
                             {item.title}
                         </h3>
 

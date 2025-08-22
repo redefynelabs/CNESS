@@ -61,7 +61,7 @@ const ContactForm: React.FC<FormProps> = ({ data }) => {
             <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300 w-fit">
               {data.badgeText}
             </p>
-            <h2 className="text-3xl md:text-5xl font-medium text-primary leading-tight">
+            <h2 className="text-3xl md:text-5xl font-[450] text-primary leading-tight">
               {data.Title}
             </h2>
             <p className="text-gray-600">{data.desc}</p>
@@ -116,7 +116,7 @@ const ContactForm: React.FC<FormProps> = ({ data }) => {
 
             <button
               type="submit"
-              className="bg-secondary text-primary px-6 py-3 rounded-full font-medium hover:bg-tertiary hover:text-foreground transition-colors duration-300"
+              className="bg-secondary text-primary px-6 py-3 rounded-full font-[450] hover:bg-tertiary hover:text-foreground transition-colors duration-300"
             >
               Send Message
             </button>

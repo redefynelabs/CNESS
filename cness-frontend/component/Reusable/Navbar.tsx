@@ -260,7 +260,7 @@ const Navbar = () => {
                   >
                     <Link
                       href={link.slug || ''}
-                      className={`flex items-center text-foreground transition-all duration-300 font-medium text-base relative px-4 py-2 rounded-full ${isActive ? 'text-primary bg-gray-100' : 'hover:text-primary'
+                      className={`flex items-center text-foreground transition-all duration-300 font-[450] text-base relative px-4 py-2 rounded-full ${isActive ? 'text-primary bg-gray-100' : 'hover:text-primary'
                         }`}
                     >
                       {link.title}
@@ -317,7 +317,7 @@ const Navbar = () => {
                             >
                               <Link
                                 href={sub.slug}
-                                className={`px-6 py-3 text-base font-medium transition-all duration-200 flex items-center justify-between group relative z-10 ${sub.slug === pathname
+                                className={`px-6 py-3 text-base font-[450] transition-all duration-200 flex items-center justify-between group relative z-10 ${sub.slug === pathname
                                   ? 'text-primary bg-tertiary'
                                   : 'text-gray-600 hover:text-primary hover:bg-purple-50'
                                   }`}
@@ -359,9 +359,9 @@ const Navbar = () => {
               initial="initial"
               whileHover="hover"
               whileTap="tap"
-              className='bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer '
+              className='bg-secondary group text-primary pl-4 pr-2 py-2 rounded-full flex font-[450] items-center justify-center gap-3 cursor-pointer '
             >
-              <Link href={'/contact'} className='text-base font-medium'>Contact</Link>
+              <Link href={'/contact'} className='text-base font-[450]'>Contact</Link>
               <motion.div
                 variants={contactArrowVariants}
                 initial="initial"
@@ -432,7 +432,7 @@ const Navbar = () => {
                     >
                       <Link
                         href={link.slug || ''}
-                        className={`flex items-center text-lg font-medium py-3 px-4 rounded-2xl transition-all duration-200 ${isActive
+                        className={`flex items-center text-lg font-[450] py-3 px-4 rounded-2xl transition-all duration-200 ${isActive
                           ? 'text-primary bg-tertiary shadow-sm'
                           : 'text-gray-700 hover:text-primary hover:bg-gray-50'
                           }`}
@@ -527,11 +527,11 @@ const Navbar = () => {
                   initial="initial"
                   whileHover="hover"
                   whileTap="tap"
-                  className='bg-secondary text-primary pl-4 pr-3 py-3 rounded-2xl flex font-medium items-center justify-center gap-3 cursor-pointer shadow-md mx-4'
+                  className='bg-secondary text-primary pl-4 pr-3 py-3 rounded-2xl flex font-[450] items-center justify-center gap-3 cursor-pointer shadow-md mx-4'
                 >
                   <Link
                     href={'/contact'}
-                    className='text-lg font-medium flex-1 text-center'
+                    className='text-lg font-[450] flex-1 text-center'
                     onClick={() => setIsOpen(false)}
                   >
                     Contact Us

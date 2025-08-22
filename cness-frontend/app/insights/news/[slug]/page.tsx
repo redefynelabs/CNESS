@@ -25,7 +25,7 @@ export default async function NewsPage({ params }: { params: Params }) {
                     <p>{news.category && <span>{news.category.name}</span>}</p>
                 </div>
                 {/* Title */}
-                <h1 className="text-3xl md:text-5xl font-medium mb-6 text-gray-900">
+                <h1 className="text-3xl md:text-5xl font-[450] mb-6 text-gray-900">
                     {news.title}
                 </h1>
 

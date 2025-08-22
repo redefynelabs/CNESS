@@ -43,7 +43,7 @@ const FreeConsultation = ({ data }: FreeConsultationProps) => {
         <div className='flex justify-between items-start space-y-4 w-full'>
           <div className=' flex flex-col items-start space-y-4'>
             <p className='px-4 py-1 rounded-full border border-primary uppercase text-sm'>{badgeText}</p>
-            <h1 className='text-4xl font-medium capitalize'>{title}</h1>
+            <h1 className='text-4xl font-[450] capitalize'>{title}</h1>
           </div>
           <div>
             <Image src={'/assets/staricon.svg'} alt='Star' height={30} width={30} />
@@ -58,7 +58,7 @@ const FreeConsultation = ({ data }: FreeConsultationProps) => {
           >
             <div className='relative px-4 sm:px-6 py-2 sm:py-3 bg-primary text-light rounded-full overflow-hidden transition-all duration-500 group-hover:bg-transparent'>
               <div className='absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out'></div>
-              <span className='relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base'>
+              <span className='relative z-10 font-[450] group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base'>
                 {buttonText}
               </span>
             </div>

@@ -27,7 +27,7 @@ const ContactHero: React.FC<ContactHeroProps> = ({ data }) => {
                 <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300">
                     {data.badgeText}
                 </p>
-                <h2 className="text-5xl font-medium">
+                <h2 className="text-5xl font-[450]">
                     {data.title.split(data.highlight)[0]}
                     <span className="text-tertiary">{data.highlight}</span>
                 </h2>
@@ -40,7 +40,7 @@ const ContactHero: React.FC<ContactHeroProps> = ({ data }) => {
                             <Image src={detail.icon.url} alt={detail.icon.name} width={20} height={20} />
                         </div>
                         <div>
-                            <p className=' font-medium text-primary'>{detail.text}</p>
+                            <p className=' font-[450] text-primary'>{detail.text}</p>
                             <p>{detail.value}</p>
                         </div>
                     </div>

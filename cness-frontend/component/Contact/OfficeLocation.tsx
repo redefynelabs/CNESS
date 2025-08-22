@@ -19,7 +19,7 @@ interface OfficeProps {
 const OfficeLocation: React.FC<OfficeProps> = ({ data }) => {
   return (
     <div className="px-6 md:px-16 py-16 bg-gray-50 relative">
-      <h2 className="text-3xl md:text-4xl font-medium text-start mb-12 text-gray-800">
+      <h2 className="text-3xl md:text-4xl font-[450] text-start mb-12 text-gray-800">
         {data.title}
       </h2>
 
@@ -38,7 +38,7 @@ const OfficeLocation: React.FC<OfficeProps> = ({ data }) => {
             >
               {/* Badge */}
               <span
-                className={`text-xs font-medium uppercase px-3 py-1 rounded-full w-fit mb-4 ${
+                className={`text-xs font-[450] uppercase px-3 py-1 rounded-full w-fit mb-4 ${
                   isFirstCard
                     ? "bg-white/20 text-white border-gray-400"
                     : "text-primary border-primary border"
@@ -48,7 +48,7 @@ const OfficeLocation: React.FC<OfficeProps> = ({ data }) => {
               </span>
 
               {/* Name */}
-              <h3 className={`text-xl font-medium mb-2 ${isFirstCard ? "text-white" : "text-gray-800"}`}>
+              <h3 className={`text-xl font-[450] mb-2 ${isFirstCard ? "text-white" : "text-gray-800"}`}>
                 {card.name}
               </h3>
 
@@ -60,7 +60,7 @@ const OfficeLocation: React.FC<OfficeProps> = ({ data }) => {
               {/* Link */}
               <Link
                 href={card.link}
-                className={`font-medium mt-auto ${
+                className={`font-[450] mt-auto ${
                   isFirstCard
                     ? "text-white underline"
                     : "text-primary hover:underline"

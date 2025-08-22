@@ -30,9 +30,9 @@ const WMDButtons: React.FC<WMDButtonsProps> = ({ data }) => {
           >
 
             <div
-              className='bg-active group text-primary pl-4 pr-2 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer '
+              className='bg-active group text-primary pl-4 pr-2 py-2 rounded-full flex font-[450] items-center justify-center gap-3 cursor-pointer '
             >
-              <Link href={button.url || "#"} className='text-base font-medium'>{button.text}</Link>
+              <Link href={button.url || "#"} className='text-base font-[450]'>{button.text}</Link>
               <div
                 className='bg-primary rounded-full p-1.5 text-secondary group-hover:animate-spin'
               >

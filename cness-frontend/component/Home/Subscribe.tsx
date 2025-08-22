@@ -45,7 +45,7 @@ const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
 
                 <div className="space-y-6 w-full max-w-lg">
                     <h1
-                        className="text-light font-medium text-3xl md:text-5xl"
+                        className="text-light font-[450] text-3xl md:text-5xl"
                         dangerouslySetInnerHTML={{ __html: data.title }}
                     />
                     <form
@@ -71,14 +71,14 @@ const Subscribe: React.FC<SubscribeProps> = ({ data }) => {
                         />
                         <motion.button
                             type="submit"
-                            className="relative bg-secondary group text-primary px-4 py-2 rounded-full flex font-medium items-center justify-center gap-3 cursor-pointer overflow-hidden"
+                            className="relative bg-secondary group text-primary px-4 py-2 rounded-full flex font-[450] items-center justify-center gap-3 cursor-pointer overflow-hidden"
                             variants={buttonVariants}
                             initial="initial"
                             whileHover="hover"
                             transition={{ duration: 0.3 }}
                         >
                             <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                            <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                            <span className="relative z-10 font-[450] group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                                 {data.buttonText}
                             </span>
                         </motion.button>

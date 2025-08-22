@@ -64,7 +64,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
             >
                 <motion.div variants={itemVariants}>
                     <motion.h1
-                        className='text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-foreground'
+                        className='text-4xl sm:text-5xl md:text-6xl font-[450] tracking-tight text-foreground'
                         variants={itemVariants}
                     >
                         {title.split(highlight)[0]}
@@ -85,7 +85,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                         >
                             <div className={`relative px-4 sm:px-6 py-2 sm:py-3 ${button.isPrimary ? 'bg-primary !text-light' : 'bg-white !text-foreground border border-gray-300'} rounded-full overflow-hidden transition-all duration-500 group-hover:bg-transparent`}>
                                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                                <span className="relative z-10 font-medium group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
+                                <span className="relative z-10 font-[450] group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
                                     {button.text}
                                 </span>
                             </div>
@@ -149,9 +149,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                             height={40}
                                         />
                                         <div className='space-y-2'>
-                                            <p className="text-base font-medium">{card.statText}</p>
+                                            <p className="text-base font-[450]">{card.statText}</p>
                                             <motion.h1
-                                                className="text-2xl font-medium text-primary"
+                                                className="text-2xl font-[450] text-primary"
                                                 viewport={{ once: true }}
                                             >
                                                 {card.statValue}
@@ -173,7 +173,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                             >
                                 {card.title && (
                                     <div className='flex md:flex-col justify-between w-full md:w-[40%] p-4 md:p-2'>
-                                        <h1 className='text-2xl font-medium'>{card.title}</h1>
+                                        <h1 className='text-2xl font-[450]'>{card.title}</h1>
                                         {card.linkText && (
                                             <div className='group flex items-center space-x-2 text-sm'>
                                                 <Link href={card.linkUrl}>{card.linkText}</Link>
@@ -194,9 +194,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                             height={40}
                                         />
                                         <div className='space-y-2'>
-                                            <p className='text-base font-medium'>{card.statText}</p>
+                                            <p className='text-base font-[450]'>{card.statText}</p>
                                             <motion.h1
-                                                className='text-2xl font-medium text-primary'
+                                                className='text-2xl font-[450] text-primary'
                                             >
                                                 {card.statValue}
                                             </motion.h1>

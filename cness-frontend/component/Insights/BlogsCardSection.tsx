@@ -46,7 +46,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
           className="text-start mb-12 flex flex-col items-start gap-4"
         >
           {/* Badge */}
-          <p className="text-xs tracking-wider uppercase px-4 py-1 rounded-full border border-gray-200 text-primary font-medium">
+          <p className="text-xs tracking-wider uppercase px-4 py-1 rounded-full border border-gray-200 text-primary font-[450]">
             {badgeText}
           </p>
 
@@ -62,7 +62,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
           {/* Optional Illustration (placeholder icon) */}
           <Image src={'/assets/not-found.jpg'} alt="NotFound.jpg" width={500} height={500} />
 
-          <h3 className="text-lg font-medium text-gray-700 mb-2">
+          <h3 className="text-lg font-[450] text-gray-700 mb-2">
             No blogs found
           </h3>
           <p className="text-gray-500 max-w-md">
@@ -72,7 +72,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
           {/* Action CTA */}
           <Link
             href="/insights"
-            className="mt-6 px-6 py-3 bg-primary hover:bg-tertiary text-light font-medium rounded-full transition-colors duration-300"
+            className="mt-6 px-6 py-3 bg-primary hover:bg-tertiary text-light font-[450] rounded-full transition-colors duration-300"
           >
             Explore Insights
           </Link>
@@ -98,7 +98,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
         <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300">
           {badgeText}
         </p>
-        <h2 className="text-3xl md:text-5xl font-medium">
+        <h2 className="text-3xl md:text-5xl font-[450]">
           {title.split(highlight)[0]}
           <span className="text-tertiary">{highlight}</span>
         </h2>
@@ -177,7 +177,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
         <div className="flex justify-center mt-10">
           <button
             onClick={handleLoadMore}
-            className="px-6 py-3 bg-primary cursor-pointer hover:bg-tertiary text-light font-medium rounded-full transition-colors duration-300"
+            className="px-6 py-3 bg-primary cursor-pointer hover:bg-tertiary text-light font-[450] rounded-full transition-colors duration-300"
           >
             Load More
           </button>

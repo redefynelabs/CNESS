@@ -35,7 +35,7 @@ const OpenPositions: React.FC<OpenPositionProps> = ({ data }) => {
               <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300/50">
                 {data.badgeText}
               </p>
-              <h2 className="text-5xl font-medium leading-tight">
+              <h2 className="text-5xl font-[450] leading-tight">
                 {data.title.split(data.highlight)[0]}
                 <span className="text-tertiary"> {data.highlight}</span>
               </h2>
@@ -56,7 +56,7 @@ const OpenPositions: React.FC<OpenPositionProps> = ({ data }) => {
                   >
                     {/* Role Text */}
                     <div className="min-w-0">
-                      <p className="text-light text-lg font-medium truncate">
+                      <p className="text-light text-lg font-[450] truncate">
                         {role.position}
                       </p>
 
