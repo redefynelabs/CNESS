@@ -3,6 +3,7 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/Reusable/Navbar";
 import Footer from "@/component/Reusable/Footer";
+import LenisProvider from "@/Provider/ScrollProvider";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -26,9 +27,11 @@ export default function RootLayout({
       <body
         className={`${workSans.variable}  antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <LenisProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );
