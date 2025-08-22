@@ -69,7 +69,7 @@ const TechnoBottomCard: React.FC<BottomCardProps> = ({ data }) => {
               scale: 1.02,
             }}
             transition={{ duration: 0.3 }}
-            className={`relative rounded-2xl p-8 flex flex-col h-full min-h-[70dvh] justify-between ${
+            className={`relative rounded-2xl p-8 flex flex-col h-full min-h-[50dvh] md:min-h-[70dvh] justify-between ${
               isMinimal ? "bg-primary text-white" : "bg-secondary text-primary"
             }`}
           >

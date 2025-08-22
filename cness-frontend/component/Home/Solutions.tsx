@@ -4,7 +4,6 @@ import { ArrowUpRight } from 'lucide-react'
 import React from 'react'
 import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 
 interface CardData {
   image: any
@@ -67,7 +66,7 @@ const Solutions = ({ data }: SolutionsProps) => {
         className="bg-primary w-full px-4 md:px-6 lg:px-10 py-10 md:py-20 flex flex-col text-light rounded-2xl"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0 }}
         variants={containerVariants}
       >
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">

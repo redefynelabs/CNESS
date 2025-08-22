@@ -27,15 +27,15 @@ const ContactHero: React.FC<ContactHeroProps> = ({ data }) => {
                 <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300">
                     {data.badgeText}
                 </p>
-                <h2 className="text-5xl font-[450]">
+                <h2 className=" text-3xl md:text-5xl font-[450]">
                     {data.title.split(data.highlight)[0]}
                     <span className="text-tertiary">{data.highlight}</span>
                 </h2>
-                <p>{data.desc}</p>
+                <p className=' text-sm md:text-base'>{data.desc}</p>
             </div>
-            <div className=' flex flex-col md:flex-row w-full justify-between md:items-center px-4 md:px-20 space-y-4'>
+            <div className=' flex flex-col md:flex-row w-full justify-between md:items-center px-4 md:px-20 space-y-6'>
                 {data.ContactDetails.map((detail, idx)=>(
-                    <div key={idx} className=' flex md:items-center gap-2'>
+                    <div key={idx} className=' flex items-center gap-2'>
                         <div className=' bg-primary rounded-full p-2'>
                             <Image src={detail.icon.url} alt={detail.icon.name} width={20} height={20} />
                         </div>

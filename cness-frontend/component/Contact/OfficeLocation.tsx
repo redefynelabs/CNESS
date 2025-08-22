@@ -30,7 +30,7 @@ const OfficeLocation: React.FC<OfficeProps> = ({ data }) => {
           return (
             <div
               key={idx}
-              className={`relative rounded-2xl p-6 flex flex-col justify-between transition-shadow duration-300 ${
+              className={`relative rounded-2xl p-6 flex flex-col justify-between transition-shadow duration-300 min-h-[50dvh] ${
                 isFirstCard
                   ? "bg-primary text-white border-gray-400"
                   : "bg-white border border-gray-300"

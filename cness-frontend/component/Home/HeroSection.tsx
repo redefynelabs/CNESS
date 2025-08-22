@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { motion, useScroll, useTransform, Variants } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 interface HeroSectionProps {
     heroData: any;
@@ -122,7 +122,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                     className='flex flex-col md:flex-row w-full absolute top-[50%] md:top-auto md:-bottom-32 px-4 md:px-10 space-y-6 space-x-6 mx-auto'
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0 }}
                     variants={containerVariants}
                 >
                     {cards.map((card: any, index: number) => (

@@ -59,7 +59,7 @@ const BenefitsCard: React.FC<BenefitsCardProps> = ({ data }) => {
         <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300">
           {data.badgeText}
         </p>
-        <h2 className="text-5xl font-[450]">
+        <h2 className=" text-3xl md:text-5xl font-[450]">
           {data.title.split(data.highlight)[0]}
           <span className="text-tertiary">{data.highlight}</span>
         </h2>

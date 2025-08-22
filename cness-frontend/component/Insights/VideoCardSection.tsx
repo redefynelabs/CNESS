@@ -69,7 +69,7 @@ const VideoCardSection: React.FC<VideoCardSectionProps> = ({ videos }) => {
     }
 
     return (
-        <div className="mt-22 bg-active rounded-3xl py-10 px-10">
+        <div className="mt-22 bg-active rounded-3xl py-10 px-4 md:px-10">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: 40 }}

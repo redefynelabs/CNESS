@@ -2,6 +2,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import React from 'react'
 import { motion, Variants } from 'framer-motion'
+import Image from 'next/image'
 
 interface ReusableHeadData {
   title: string
@@ -118,7 +119,7 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
             <span className="text-tertiary">{highlight}</span>
           </motion.h1>
           {isDescriptionLeft && (
-            <motion.p className="text-base" variants={itemVariants}>
+            <motion.p className=" text-sm md:text-base" variants={itemVariants}>
               {description}
             </motion.p>
           )}
@@ -146,7 +147,7 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
           variants={itemVariants}
         >
           {!isDescriptionLeft && description && (
-            <motion.p className="text-base" variants={itemVariants}>
+            <motion.p className="text-sm md:text-base" variants={itemVariants}>
               {description}
             </motion.p>
           )}
@@ -175,10 +176,12 @@ const ReusableHead = ({ data }: ReusableHeadProps) => {
           className="w-full mt-10"
           variants={imageVariants}
         >
-          <img
+          <Image
             src={imageUrl.url}
             alt="Section Image"
-            className="w-full h-auto object-cover rounded-3xl"
+            width={1000}
+            height={1000}
+            className="w-full min-h-[50dvh] h-auto object-cover rounded-3xl"
           />
         </motion.div>
       )}

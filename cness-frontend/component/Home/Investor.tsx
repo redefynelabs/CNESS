@@ -35,14 +35,14 @@ const Investor = ({ data }: InvestorProps) => {
           alt='Investor Background'
           width={500}
           height={500}
-          className='w-full rounded-3xl object-cover'
+          className='w-full min-h-[50dvh] rounded-3xl object-cover'
         />
       </div>
 
-      <div className='flex flex-col items-start justify-between space-y-4 bg-tertiary rounded-3xl py-6 px-6 w-full md:w-1/2'>
+      <div className='flex flex-col items-start justify-between space-y-4 bg-tertiary rounded-3xl py-6 px-6 w-full md:w-1/2 min-h-[50dvh]'>
         <div className='flex flex-col items-start space-y-4'>
           <p className='px-4 py-1 rounded-full border border-primary'>{badgeText}</p>
-          <h1 className='text-4xl font-[450]'>{title}</h1>
+          <h1 className=' text-3xl md:text-4xl font-[450]'>{title}</h1>
         </div>
 
         <div className='space-y-4'>

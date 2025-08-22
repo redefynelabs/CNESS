@@ -45,9 +45,9 @@ const FRCards: React.FC<FundingRoundCardProps> = ({ data }) => {
 
             {/* Content Card */}
             {isContentCard && (
-              <div className="flex flex-col h-full justify-between gap-6">
+              <div className="flex flex-col min-h-[50dvh] h-full justify-between gap-6">
                 <div className="flex items-start justify-between gap-4">
-                  <div className="space-y-4">
+                  <div className="space-y-4 flex flex-col">
                     {card.badgeText && (
                       <span className="px-4 py-1 border rounded-full text-xs font-[450] w-fit uppercase">
                         {card.badgeText}

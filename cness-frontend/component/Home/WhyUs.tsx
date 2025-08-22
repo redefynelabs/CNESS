@@ -75,7 +75,7 @@ const WhyUs = ({ data }: WhyUsProps) => {
                     alt="Why Us Background"
                     width={1920}
                     height={1080}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full min-h-[60dvh] object-cover"
                 />
 
                 <motion.div
@@ -99,7 +99,7 @@ const WhyUs = ({ data }: WhyUsProps) => {
 
                     <div className="space-y-4 sm:space-y-6">
                         <motion.h1
-                            className="font-[450] text-xl sm:text-3xl md:text-4xl inline-flex md:flex-col items-start"
+                            className="font-[450] text-3xl md:text-4xl flex-col items-start"
                             variants={itemVariants}
                         >
                             {title.split('{highlight}')[0]}

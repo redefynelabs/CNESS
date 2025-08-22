@@ -57,7 +57,7 @@ const TechnoSection: React.FC<TechnoProps> = ({ data }) => {
         <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300 text-foreground">
           {data.badgeText}
         </p>
-        <h2 className="text-5xl font-[450]">
+        <h2 className=" text-3xl md:text-5xl font-[450]">
           {data.title.split(data.highlight)[0]}
           <span className="text-tertiary">{data.highlight}</span>
         </h2>
@@ -69,7 +69,7 @@ const TechnoSection: React.FC<TechnoProps> = ({ data }) => {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0 }}
       >
         {data.TechnoCards.map((card) => (
           <motion.div
@@ -81,7 +81,7 @@ const TechnoSection: React.FC<TechnoProps> = ({ data }) => {
           >
             {/* Image */}
             <motion.div
-              className="relative w-full h-full aspect-[3/4] overflow-hidden"
+              className="relative w-full h-full aspect-square md:aspect-[3/4] overflow-hidden"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >

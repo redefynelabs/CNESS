@@ -37,7 +37,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
 
   if (!blogs || blogs.length === 0) {
     return (
-      <div className="w-full py-16 px-6 sm:px-10 mt-22 bg-active rounded-3xl">
+      <div className="w-full py-16 px-4 md:px-10 mt-22 bg-active rounded-3xl">
         {/* Header with Badge + Title */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -58,7 +58,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
         </motion.div>
 
         {/* Empty State */}
-        <div className="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-2xl shadow-sm border border-gray-100">
+        <div className="flex flex-col items-center justify-center py-20 px-4 text-center bg-white rounded-2xl shadow-sm border border-gray-100">
           {/* Optional Illustration (placeholder icon) */}
           <Image src={'/assets/not-found.jpg'} alt="NotFound.jpg" width={500} height={500} />
 
@@ -87,7 +87,7 @@ const BlogsCardSection: React.FC<BlogsCardSectionProps> = ({
   };
 
   return (
-    <div className="mt-22 bg-active rounded-3xl py-10 px-10">
+    <div className="mt-22 bg-active rounded-3xl py-10 px-4 md:px-10">
       {/* Header with Badge + Title */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

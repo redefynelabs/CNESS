@@ -25,21 +25,21 @@ const OpenPositions: React.FC<OpenPositionProps> = ({ data }) => {
           alt="OverlayStar.svg"
           width={500}
           height={500}
-          className="absolute left-0 top-0 w-1/2 opacity-20 z-0 pointer-events-none select-none"
+          className="absolute left-0 top-0 md:w-1/2 opacity-20 z-0 pointer-events-none select-none"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 z-10 relative">
           {/* Left copy */}
           <div>
-            <div className="mb-12 flex items-start flex-col gap-6 text-light">
+            <div className=" mt-6 md:mt-0 md:mb-12 flex items-start flex-col gap-6 text-light">
               <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300/50">
                 {data.badgeText}
               </p>
-              <h2 className="text-5xl font-[450] leading-tight">
+              <h2 className=" text-3xl md:text-5xl font-[450] leading-tight">
                 {data.title.split(data.highlight)[0]}
                 <span className="text-tertiary"> {data.highlight}</span>
               </h2>
-              <p className="text-base">{data.desc}</p>
+              <p className=" text-sm md:text-base">{data.desc}</p>
             </div>
           </div>
 

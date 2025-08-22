@@ -53,7 +53,7 @@ const Awards = ({ data }: AwardsProps) => {
       className='w-full px-4 md:px-6 lg:px-10 text-foreground flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pb-20 bg-gradient-to-b'
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0 }}
       variants={containerVariants}
     >
       <motion.div className='w-full' variants={itemVariants}>
@@ -62,19 +62,19 @@ const Awards = ({ data }: AwardsProps) => {
           alt='Investor Background'
           width={500}
           height={500}
-          className='w-full rounded-3xl object-cover'
+          className='w-full min-h-[50dvh] rounded-3xl object-cover'
         />
       </motion.div>
 
       <motion.div
-        className='flex flex-col items-start justify-between space-y-4 bg-tertiary rounded-3xl py-6 px-6 w-full md:w-1/2'
+        className='flex flex-col items-start justify-between space-y-14 bg-tertiary rounded-3xl py-6 px-6 w-full md:w-1/2 min-h-[50dvh]'
         variants={itemVariants}
       >
         <div className='flex flex-col items-start space-y-4'>
           <motion.p variants={itemVariants} className='px-4 py-1 rounded-full border border-primary'>
             {badgeText}
           </motion.p>
-          <motion.h1 variants={itemVariants} className='text-4xl font-[450]'>
+          <motion.h1 variants={itemVariants} className=' text-3xl md:text-4xl font-[450]'>
             {title}
           </motion.h1>
         </div>

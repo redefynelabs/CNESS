@@ -56,8 +56,8 @@ const ContactForm: React.FC<FormProps> = ({ data }) => {
     <div className="px-4 md:px-10 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-gray-50 rounded-2xl ">
         {/* Left side content */}
-        <div className=" px-10 ">
-          <div className="mb-10 flex flex-col gap-6 max-w-xl">
+        <div className=" px-4 md:px-10 ">
+          <div className=" py-10 md:py-0 md:mb-10 flex flex-col gap-6 max-w-xl">
             <p className="text-xs uppercase px-4 py-1 rounded-full border border-gray-300 w-fit">
               {data.badgeText}
             </p>
@@ -133,11 +133,11 @@ const ContactForm: React.FC<FormProps> = ({ data }) => {
             className="rounded-2xl object-cover w-full"
           />
 
-          <div className=" bg-white/80 backdrop-blur-2xl absolute bottom-10 rounded-full mx-10 px-6 py-3 flex items-center gap-2">
+          <div className=" bg-white/80 backdrop-blur-2xl absolute bottom-4 md:bottom-10 rounded-full mx-2 md:mx-10 px-3 md:px-6 py-3 flex items-center gap-2">
             <div className=" bg-secondary p-2 rounded-full text-primary">
               <Phone size={20} />
             </div>
-            <p>Call us at <Link href={'tel:(101) 500 0200'} className=" text-tertiary underline">(101) 500 0200</Link>  or fill out our form, and we’ll contact you within one business day.</p>
+            <p className=" text-xs md:text-base">Call us at <Link href={'tel:(101) 500 0200'} className=" text-tertiary underline">(101) 500 0200</Link>  or fill out our form, and we’ll contact you within one business day.</p>
           </div>
         </div>
       </div>
