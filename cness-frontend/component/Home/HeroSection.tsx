@@ -68,7 +68,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                         variants={itemVariants}
                     >
                         {title.split(highlight)[0]}
-                        <br />
                         <span className='text-tertiary'>{highlight}</span>
                     </motion.h1>
                 </motion.div>
@@ -145,8 +144,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                         <Image
                                             src={card.icon.url}
                                             alt={'Icon'}
-                                            width={40}
-                                            height={40}
+                                            width={30}
+                                            height={30}
                                         />
                                         <div className='space-y-2'>
                                             <p className="text-base font-[450]">{card.statText}</p>
@@ -186,12 +185,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
                                 )}
 
                                 <div className='bg-white rounded-2xl px-6 py-4 flex justify-between w-full space-x-8 items-end'>
-                                    <div className=' flex flex-col justify-between space-y-10'>
+                                    <div className=' flex flex-col justify-between h-full space-y-10'>
                                         <Image
                                             src={card.icon.url}
                                             alt={'Icon'}
-                                            width={40}
-                                            height={40}
+                                            width={30}
+                                            height={30}
                                         />
                                         <div className='space-y-2'>
                                             <p className='text-base font-[450]'>{card.statText}</p>
