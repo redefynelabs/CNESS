@@ -28,7 +28,7 @@ export default async function CompanyPage() {
   const WMDCardsData = await fetchWMDCards();
 
 
-  console.log(WMDCardsData)
+  // console.log(WMDCardsData)
 
   return (
     <div>
