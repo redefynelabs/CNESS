@@ -1,7 +1,6 @@
 import ReusableHead from '@/component/Reusable/ReusableHead'
 import { UnderDevelopment } from '@/component/UnderDev'
 import React from 'react';
-import heroData from '@/data/Services/Hero.json'
 import { fetchPlatform, fetchPlatformModule, fetchSolStats, fetchSolutionsHero, fetchTechnoBottomCard, fetchTechnoSection } from '@/utils/Solution/fetchSolutions';
 import SolutionStats from '@/component/Solutions/SolutionStats';
 import PlatformModules from '@/component/Solutions/PlatformModules';

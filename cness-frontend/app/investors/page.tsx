@@ -1,6 +1,5 @@
 import React from 'react';
 import ReusableHead from '@/component/Reusable/ReusableHead';
-import InvestorHero from '@/data/Investors/invesHero.json'
 import { fetchFAQ, fetchFRCards, fetchFRHead, fetchInvestorHero, fetchPitchDeckSection } from '@/utils/Investor/fetchInvestor';
 import FRCards from '@/component/Investor/FRCards';
 import PitchDeckSection from '@/component/Investor/PitchDeckSection';

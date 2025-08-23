@@ -1,6 +1,5 @@
 import React from 'react';
 import ReusableHead from '@/component/Reusable/ReusableHead';
-import careerHero from '@/data/Careers/careerHero.json'
 import { fetchAwards, fetchBenefits, fetchCareerHero, fetchCultureAndCommunity, fetchOpenPositions } from '@/utils/Career/fetchCareer';
 import Awards from '@/component/Career/Awards';
 import BenefitsCard from '@/component/Career/BenefitCards';
