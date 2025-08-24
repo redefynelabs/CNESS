@@ -59,12 +59,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heroData }) => {
             variants={containerVariants}
         >
             <motion.div
-                className='flex flex-col md:flex-row w-full items-start md:items-end space-y-8 md:space-y-0 md:space-x-20 py-12 px-4 sm:px-6 lg:px-10'
+                className='flex flex-col md:flex-row w-full items-start md:items-end justify-between space-y-8 md:space-y-0 md:space-x-20 py-12 px-4 sm:px-6 lg:px-10'
                 variants={containerVariants}
             >
-                <motion.div variants={itemVariants}>
+                <motion.div variants={itemVariants} className=' max-w-3xl'>
                     <motion.h1
-                        className='text-4xl sm:text-5xl md:text-6xl font-[450] tracking-tight text-foreground'
+                        className='text-4xl sm:text-5xl md:text-6xl font-[450]  tracking-tight text-foreground'
                         variants={itemVariants}
                     >
                         {title.split(highlight)[0]}

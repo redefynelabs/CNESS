@@ -29,18 +29,19 @@ const Footer = () => {
                 <div className='flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8 lg:gap-10'>
                     {/* Content */}
                     <div className='space-y-6 lg:space-y-8 w-full lg:w-1/2 animate-fade-in-up'>
-                        <Image 
-                            src={'/CNESS_Logo.png'} 
-                            alt='Logo' 
-                            width={100} 
+                        <Image
+                            src={'/CNESS_Logo.png'}
+                            alt='Logo'
+                            width={100}
                             height={100}
                             className='w-24 sm:w-28 lg:w-32 h-auto'
                         />
                         <div className='space-y-4'>
                             <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-[450]'>
-                                Ready to <span className='text-tertiary'>Take Control</span> of your Finances?
+                                Join the Platform for a
+                                <span className='text-tertiary'> More Conscious</span> Future!
                             </h1>
-                            <p className='text-base sm:text-lg'>We look forward to learning about your financial goals.</p>
+                            <p className='text-base sm:text-lg'>Get certified, grow consciously, and lead with trust.</p>
                         </div>
                         <Link
                             href={''}
@@ -49,10 +50,11 @@ const Footer = () => {
                             <div className="relative px-4 sm:px-6 py-2 sm:py-3 bg-primary text-light rounded-full overflow-hidden transition-all duration-500 group-hover:bg-transparent">
                                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                                 <span className="relative z-10 font-[450] group-hover:text-foreground transition-colors duration-500 whitespace-nowrap text-sm sm:text-base">
-                                    Free Consultation
+                                    Start Your CNESS Journey
+
                                 </span>
                             </div>
-                            <div className="relative p-2 sm:p-3 bg-primary text-light rounded-full overflow-hidden transition-all duration-500 group-hover:bg-transparent ml-2">
+                            <div className="relative p-2 sm:p-3 bg-primary text-light rounded-full overflow-hidden transition-all duration-500 group-hover:bg-transparent ">
                                 <div className="absolute inset-0 bg-tertiary transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                                 <div className="relative z-10 group-hover:text-foreground transition-all duration-500 group-hover:rotate-45">
                                     <ArrowUpRight size={20} />
@@ -104,11 +106,11 @@ const Footer = () => {
             <div className='px-4 sm:px-6 lg:px-10 py-8'>
                 <div className='flex flex-wrap justify-center lg:justify-between gap-4 lg:gap-8 py-6 border-b border-gray-300 md:px-10'>
                     {quickLinks.map((link, idx) => (
-                        <Link 
-                            key={idx} 
-                            href={link.slug} 
+                        <Link
+                            key={idx}
+                            href={link.slug}
                             className='font-[450] text-sm sm:text-base hover:text-primary transition-colors duration-300 animate-fade-in-up'
-                            style={{animationDelay: `${idx * 100}ms`}}
+                            style={{ animationDelay: `${idx * 100}ms` }}
                         >
                             {link.title}
                         </Link>
@@ -118,8 +120,8 @@ const Footer = () => {
                 {/* Watermarks */}
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-6 py-8'>
                     <p className='text-sm sm:text-base text-center lg:text-left animate-fade-in-up'>
-                        © 2025 CNESS. All Rights Reserved 
-                        
+                        © 2025 CNESS. All Rights Reserved
+
                         | Developed by <Link className='text-tertiary hover:text-primary transition-colors duration-300' href={'https://www.thecreativetrading.co/'}>The Creative Trading</Link>
                     </p>
                     <div className='flex space-x-4 animate-fade-in-up animation-delay-200'>
@@ -128,8 +130,8 @@ const Footer = () => {
                     </div>
                     <div className='flex space-x-4 items-center animate-fade-in-up animation-delay-400'>
                         {socials.map((social, idx) => (
-                            <Link 
-                                key={idx} 
+                            <Link
+                                key={idx}
                                 href={social.url}
                                 className='hover:text-primary transition-colors duration-300 hover:scale-110 transform'
                             >
