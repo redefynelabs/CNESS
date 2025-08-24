@@ -122,7 +122,7 @@ const Footer = () => {
                     <p className='text-sm sm:text-base text-center lg:text-left animate-fade-in-up'>
                         © 2025 CNESS. All Rights Reserved
 
-                        | Developed by <Link className='text-tertiary hover:text-primary transition-colors duration-300' href={'https://www.thecreativetrading.co/'}>The Creative Trading</Link>
+                        | Developed by <Link className='text-tertiary hover:text-primary transition-colors duration-300' href={'https://www.thecreativetrading.co/'}>Creative Trading Co.</Link>
                     </p>
                     <div className='flex space-x-4 animate-fade-in-up animation-delay-200'>
                         <Link href={''} className='text-sm sm:text-base hover:text-primary transition-colors duration-300'>Terms & Conditions</Link>
